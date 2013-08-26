@@ -18,9 +18,25 @@
     </modules>
 
     <global>
+        <models>
+            <magento_localized_ebay>
+                <class>IntegerNet_MagentoLocalizedEbay_Model</class>
+            </magento_localized_ebay>
+        </models>
     </global>
 
     <adminhtml>
+        <events>
+            <magento_localized_form_save>
+                <observers>
+                    <magento_localized_ebay>
+                        <type>singleton</type>
+                        <class>magento_localized_ebay/observer</class>
+                        <method>magentoLocalizedFormSave</method>
+                    </magento_localized_ebay>
+                </observers>
+            </magento_localized_form_save>
+        </events>
         <layout>
             <updates>
                 <magento_localized_ebay>
