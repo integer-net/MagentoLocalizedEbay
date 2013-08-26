@@ -4,7 +4,7 @@
  * Ebay edition package for Magento Localized
  *
  * @category   IntegerNet
- * @package    MagentoLocalizedEbay
+ * @package    IntegerNet_MagentoLocalizedEbay
  * @copyright  Copyright (c) 2013 integer_net GmbH (http://www.integer-net.de/)
  * @license    http://opensource.org/licenses/gpl-3.0 GNU General Public License, version 3 (GPLv3)
  * @author     Andreas von Studnitz <avs@integer-net.de>
@@ -12,9 +12,9 @@
  -->
 <config>
     <modules>
-        <MagentoLocalizedEbay>
+        <IntegerNet_MagentoLocalizedEbay>
             <version>0.1.0</version>
-        </MagentoLocalizedEbay>
+        </IntegerNet_MagentoLocalizedEbay>
     </modules>
 
     <global>
@@ -28,6 +28,15 @@
                 </magento_localized_ebay>
             </updates>
         </layout>
+        <translate>
+            <modules>
+                <integernet_magentolocalizedebay>
+                    <files>
+                        <default>IntegerNet_MagentoLocalizedEbay.csv</default>
+                    </files>
+                </integernet_magentolocalizedebay>
+            </modules>
+        </translate>
     </adminhtml>
 
     <default>
@@ -39,5 +48,10 @@
             <logo_2_url>http://www.ebay.de/</logo_2_url>
             <display_paypal_email_field>0</display_paypal_email_field>
         </magento_localized>
+        <payment>
+            <billsafe>
+                <active>1</active>
+            </billsafe>
+        </payment>
     </default>
 </config>
