@@ -1,0 +1,6 @@
+"Install BillSAFE module","BillSAFE-Modul installieren"
+"Is BillSAFE payment active?","BillSAFE-Zahlungen aktivieren"
+"Test mode (sandbox)","Testmodus (Sandbox)"
+"Merchant ID","Verkäufer-ID"
+"License Key","Lizenzschlüssel"
+"You can find this by logging in to the <a href=""%s"" target=""_blank"">BillSAFE payment backend</a>.","Sie finden diese Daten im <a href=""%s"" target=""_blank"">BillSAFE Payment Backend</a>."
