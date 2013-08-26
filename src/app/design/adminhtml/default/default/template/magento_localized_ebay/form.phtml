@@ -24,6 +24,8 @@
     <div class="hor-scroll">
         <table cellspacing="0" class="form-list">
             <tbody>
+
+            <?php if (!Mage::getStoreConfig('magento_localized/installed_modules/billsafe/billsafe')): ?>
             <tr>
                 <td class="label"><label for="field_billsafe_install"><?php echo $this->__('Install BillSAFE module') ?></label></td>
                 <td class="value">
@@ -36,9 +38,10 @@
                     <img src="<?php echo $this->getSkinUrl('magento_localized/logo_billsafe.png') ?>" alt="BillSAFE" />
                 </td>
             </tr>
+            <?php endif ?>
 
             <tr>
-                <td class="label"><label for="field_billsafe_active"><?php echo $this->__('Is BillSAFE payment active?') ?></label></td>
+                <td class="label"><label for="field_billsafe_active"><?php echo $this->__('Activate BillSAFE payment') ?></label></td>
                 <td class="value">
                     <select name="billsafe_active" id="field_billsafe_active">
                         <option value="0" <?php if (!Mage::getStoreConfigFlag('payment/billsafe/active')): ?>selected="selected"<?php endif ?>><?php echo $this->__('No') ?></option>
@@ -48,7 +51,7 @@
             </tr>
 
             <tr>
-                <td class="label"><label for="field_billsafe_sandbox"><?php echo $this->__('Test mode (sandbox)') ?></label></td>
+                <td class="label"><label for="field_billsafe_sandbox"><?php echo $this->__('Test mode (sandbox) for BillSAFE payment') ?></label></td>
                 <td class="value">
                     <select name="billsafe_sandbox" id="field_billsafe_sandbox">
                         <option value="0" <?php if (!Mage::getStoreConfigFlag('payment/billsafe/sandbox')): ?>selected="selected"<?php endif ?>><?php echo $this->__('No') ?></option>
@@ -72,6 +75,27 @@
                 </td>
                 <td class="comment"><?php echo $this->__('You can find this by logging in to the <a href="%s" target="_blank">BillSAFE payment backend</a>.', 'https://client.billsafe.de/main/mainmenu') ?></td>
             </tr>
+
+            <tr>
+                <td class="label"><label for="field_billsafe_installment_active"><?php echo $this->__('Activate BillSAFE installment payment') ?></label></td>
+                <td class="value">
+                    <select name="billsafe_installment_active" id="field_billsafe_installment_active">
+                        <option value="0" <?php if (!Mage::getStoreConfigFlag('payment/billsafe_installment/active')): ?>selected="selected"<?php endif ?>><?php echo $this->__('No') ?></option>
+                        <option value="1" <?php if (Mage::getStoreConfigFlag('payment/billsafe_installment/active')): ?>selected="selected"<?php endif ?>><?php echo $this->__('Yes') ?></option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label"><label for="field_billsafe_installment_sandbox"><?php echo $this->__('Test mode (sandbox) for BillSAFE installment payment') ?></label></td>
+                <td class="value">
+                    <select name="billsafe_installment_sandbox" id="field_billsafe_installment_sandbox">
+                        <option value="0" <?php if (!Mage::getStoreConfigFlag('payment/billsafe_installment/sandbox')): ?>selected="selected"<?php endif ?>><?php echo $this->__('No') ?></option>
+                        <option value="1" <?php if (Mage::getStoreConfigFlag('payment/billsafe_installment/sandbox')): ?>selected="selected"<?php endif ?>><?php echo $this->__('Yes') ?></option>
+                    </select>
+                </td>
+            </tr>
+
             </tbody>
         </table>
     </div>
