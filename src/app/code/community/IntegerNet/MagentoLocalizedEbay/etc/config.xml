@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Ebay edition package for Magento Localized
+ *
+ * @category   IntegerNet
+ * @package    MagentoLocalizedEbay
+ * @copyright  Copyright (c) 2013 integer_net GmbH (http://www.integer-net.de/)
+ * @license    http://opensource.org/licenses/gpl-3.0 GNU General Public License, version 3 (GPLv3)
+ * @author     Andreas von Studnitz <avs@integer-net.de>
+ */
+ -->
+<config>
+    <modules>
+        <MagentoLocalizedEbay>
+            <version>0.1.0</version>
+        </MagentoLocalizedEbay>
+    </modules>
+
+    <global>
+    </global>
+
+    <default>
+        <magento_localized>
+            <module_title_suffix> - ebay Edition</module_title_suffix>
+            <module_code_suffix>_ebay</module_code_suffix>
+            <module_url_override>http://www.ebay.de/</module_url_override>
+            <logo_2_filename>magento_localized/logo.png</logo_2_filename>
+            <logo_2_url>http://www.ebay.de/</logo_2_url>
+        </magento_localized>
+    </default>
+</config>
