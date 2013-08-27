@@ -67,7 +67,11 @@
         <payment>
             <billsafe>
                 <active>1</active>
+                <sandbox>1</sandbox>
             </billsafe>
+            <billsafe_installment>
+                <sandbox>1</sandbox>
+            </billsafe_installment>
         </payment>
     </default>
 </config>
