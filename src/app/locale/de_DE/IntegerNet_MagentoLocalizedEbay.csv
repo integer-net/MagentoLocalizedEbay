@@ -6,3 +6,7 @@
 "You can find this by logging in to the <a href=""%s"" target=""_blank"">BillSAFE payment backend</a>.","Sie finden diese Daten im <a href=""%s"" target=""_blank"">BillSAFE Payment Backend</a>."
 "Activate BillSAFE installment payment","BillSAFE-Ratenkauf aktivieren"
 "Test mode (sandbox) for BillSAFE installment payment","Testmodus (Sandbox) für BillSAFE-Ratenkauf"
+
+"Activate PayPal Express payment","PayPal Express aktivieren"
+"Test mode (sandbox) for PayPal payment","Testmodus (Sandbox) für PayPal-Zahlungen"
+"Email Associated with PayPal Merchant Account","Email-Adresse des PayPal Händler-Kontos"

@@ -16,6 +16,7 @@
             <active>true</active>
             <codePool>community</codePool>
             <depends>
+                <Mage_Paypal />
                 <IntegerNet_MagentoLocalized />
             </depends>
         </IntegerNet_MagentoLocalizedEbay>

@@ -25,6 +25,14 @@ class IntegerNet_MagentoLocalizedEbay_Model_Observer
         $this->_setConfigData('payment/billsafe/merchant_license', $params['billsafe_merchant_license']);
         $this->_setConfigData('payment/billsafe_installment/active', $params['billsafe_installment_active']);
         $this->_setConfigData('payment/billsafe_installment/sandbox', $params['billsafe_installment_sandbox']);
+
+        $this->_setConfigData('payment/express_checkout_required/enable_express_checkout', $params['paypal_active']);
+        $this->_setConfigData('payment/express_checkout_required/sandbox_flag', $params['paypal_sandbox']);
+        $this->_setConfigData('payment/express_checkout_required/business_account', $params['paypal_email']);
+        $this->_setConfigData('payment/express_checkout_required/api_username', $params['paypal_api_username']);
+        $this->_setConfigData('payment/express_checkout_required/paypal_api_password', $params['api_password']);
+        $this->_setConfigData('payment/express_checkout_required/paypal_api_signature', $params['api_signature']);
+        $this->_setConfigData('payment/settings_ec/title', 'PayPal');
     }
 
     /**

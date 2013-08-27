@@ -72,6 +72,14 @@
             <billsafe_installment>
                 <sandbox>1</sandbox>
             </billsafe_installment>
+            <express_checkout_required_express_checkout>
+                <sandbox_flag>1</sandbox_flag>
+            </express_checkout_required_express_checkout>
+            <settings_ec>
+                <title>PayPal</title>
+                <visible_on_cart>0</visible_on_cart>
+                <visible_on_product>0</visible_on_product>
+            </settings_ec>
         </payment>
     </default>
 </config>
