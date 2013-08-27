@@ -75,11 +75,12 @@
             <express_checkout_required_express_checkout>
                 <sandbox_flag>1</sandbox_flag>
             </express_checkout_required_express_checkout>
-            <settings_ec>
+            <paypal_express>
                 <title>PayPal</title>
-                <visible_on_cart>0</visible_on_cart>
+                <sort_order>20</sort_order>
+                <visible_on_cart>1</visible_on_cart>
                 <visible_on_product>0</visible_on_product>
-            </settings_ec>
+            </paypal_express>
         </payment>
     </default>
 </config>

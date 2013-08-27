@@ -14,7 +14,7 @@ class IntegerNet_MagentoLocalizedEbay_Model_Observer
     {
         $params = $observer->getParams();
 
-        if ($params['billsafe_install'] == 1) {
+        if (isset($params['billsafe_install']) && $params['billsafe_install'] == 1) {
 
             Mage::getSingleton('magento_localized/installer')->installPackageByName('billsafe/billsafe');
         }
@@ -26,13 +26,12 @@ class IntegerNet_MagentoLocalizedEbay_Model_Observer
         $this->_setConfigData('payment/billsafe_installment/active', $params['billsafe_installment_active']);
         $this->_setConfigData('payment/billsafe_installment/sandbox', $params['billsafe_installment_sandbox']);
 
-        $this->_setConfigData('payment/express_checkout_required/enable_express_checkout', $params['paypal_active']);
-        $this->_setConfigData('payment/express_checkout_required/sandbox_flag', $params['paypal_sandbox']);
-        $this->_setConfigData('payment/express_checkout_required/business_account', $params['paypal_email']);
-        $this->_setConfigData('payment/express_checkout_required/api_username', $params['paypal_api_username']);
-        $this->_setConfigData('payment/express_checkout_required/paypal_api_password', $params['api_password']);
-        $this->_setConfigData('payment/express_checkout_required/paypal_api_signature', $params['api_signature']);
-        $this->_setConfigData('payment/settings_ec/title', 'PayPal');
+        $this->_setConfigData('payment/paypal_express/active', $params['paypal_active']);
+        $this->_setConfigData('paypal/wpp/sandbox_flag', $params['paypal_sandbox']);
+        $this->_setConfigData('paypal/general/business_account', $params['paypal_express_email']);
+        $this->_setConfigData('paypal/wpp/api_username', $this->_encrypt($params['paypal_api_username']));
+        $this->_setConfigData('paypal/wpp/api_password', $this->_encrypt($params['paypal_api_password']));
+        $this->_setConfigData('paypal/wpp/api_signature', $this->_encrypt($params['paypal_api_signature']));
     }
 
     /**
@@ -47,4 +46,24 @@ class IntegerNet_MagentoLocalizedEbay_Model_Observer
     {
         Mage::getModel('eav/entity_setup', 'core_setup')->setConfigData($key, $value, $scope, $scopeId);
     }
+
+    /**
+     * Encrypt value before saving
+     *
+     * @param string $value
+     * @return string
+     */
+    protected function _encrypt($value)
+    {
+        // don't change value, if an obscured value came
+        if (preg_match('/^\*+$/', $value)) {
+            return $value;
+        }
+        if (!empty($value) && ($encrypted = Mage::helper('core')->encrypt($value))) {
+            return $encrypted;
+        }
+
+        return $value;
+    }
+
 }

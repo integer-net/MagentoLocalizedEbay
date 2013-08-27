@@ -29,9 +29,12 @@
                 <td class="label"><label for="field_paypal_active"><?php echo $this->__('Activate PayPal Express payment') ?></label></td>
                 <td class="value">
                     <select name="paypal_active" id="field_paypal_active">
-                        <option value="0" <?php if (!Mage::getStoreConfigFlag('payment/express_checkout_required/enable_express_checkout')): ?>selected="selected"<?php endif ?>><?php echo $this->__('No') ?></option>
-                        <option value="1" <?php if (Mage::getStoreConfigFlag('payment/express_checkout_required/enable_express_checkout')): ?>selected="selected"<?php endif ?>><?php echo $this->__('Yes') ?></option>
+                        <option value="0" <?php if (!Mage::getStoreConfigFlag('payment/paypal_express/active')): ?>selected="selected"<?php endif ?>><?php echo $this->__('No') ?></option>
+                        <option value="1" <?php if (Mage::getStoreConfigFlag('payment/paypal_express/active')): ?>selected="selected"<?php endif ?>><?php echo $this->__('Yes') ?></option>
                     </select>
+                </td>
+                <td class="comment" rowspan="3">
+                    <img src="<?php echo $this->getSkinUrl('images/paypal/pp-alt.png') ?>" alt="PayPal" />
                 </td>
             </tr>
 
@@ -39,24 +42,23 @@
                 <td class="label"><label for="field_paypal_sandbox"><?php echo $this->__('Test mode (sandbox) for PayPal payment') ?></label></td>
                 <td class="value">
                     <select name="paypal_sandbox" id="field_paypal_sandbox">
-                        <option value="0" <?php if (!Mage::getStoreConfigFlag('payment/express_checkout_required_express_checkout/sandbox_flag')): ?>selected="selected"<?php endif ?>><?php echo $this->__('No') ?></option>
-                        <option value="1" <?php if (Mage::getStoreConfigFlag('payment/express_checkout_required_express_checkout/sandbox_flag')): ?>selected="selected"<?php endif ?>><?php echo $this->__('Yes') ?></option>
+                        <option value="0" <?php if (!Mage::getStoreConfigFlag('paypal/wpp/sandbox_flag')): ?>selected="selected"<?php endif ?>><?php echo $this->__('No') ?></option>
+                        <option value="1" <?php if (Mage::getStoreConfigFlag('paypal/wpp/sandbox_flag')): ?>selected="selected"<?php endif ?>><?php echo $this->__('Yes') ?></option>
                     </select>
                 </td>
             </tr>
 
             <tr>
-                <td class="label"><label for="field_paypal_email"><?php echo $this->__('Email Associated with PayPal Merchant Account') ?></label></td>
+                <td class="label"><label for="field_paypal_express_email"><?php echo $this->__('Email Associated with PayPal Merchant Account') ?></label></td>
                 <td class="value">
-                    <input type="text" name="paypal_email" id="field_paypal_email" class="input-text" value="<?php echo Mage::getStoreConfig('payment/express_checkout_required_express_checkout/business_account') ?>" />
+                    <input type="text" name="paypal_express_email" id="field_paypal_express_email" class="input-text" value="<?php echo Mage::getStoreConfig('paypal/general/business_account') ?>" />
                 </td>
-                <td class="comment"></td>
             </tr>
 
             <tr>
                 <td class="label"><label for="field_paypal_api_username"><?php echo Mage::helper('paypal')->__('API Username') ?></label></td>
                 <td class="value">
-                    <input type="text" name="paypal_api_username" id="field_paypal_api_username" class="input-text" value="<?php echo Mage::getStoreConfig('payment/express_checkout_required_express_checkout/api_username') ?>" />
+                    <input type="password" name="paypal_api_username" id="field_paypal_api_username" class="input-text" value="<?php echo Mage::getStoreConfig('paypal/wpp/api_username') ?>" />
                 </td>
                 <td class="comment" rowspan="3">
                     <div class="pp-buttons-container">
@@ -73,14 +75,14 @@
             <tr>
                 <td class="label"><label for="field_paypal_api_password"><?php echo Mage::helper('paypal')->__('API Password') ?></label></td>
                 <td class="value">
-                    <input type="text" name="paypal_api_password" id="field_paypal_api_password" class="input-text" value="<?php echo Mage::getStoreConfig('payment/express_checkout_required_express_checkout/api_password') ?>" />
+                    <input type="password" name="paypal_api_password" id="field_paypal_api_password" class="input-text" value="<?php echo Mage::getStoreConfig('paypal/wpp/api_password') ?>" />
                 </td>
             </tr>
 
             <tr>
                 <td class="label"><label for="field_paypal_api_signature"><?php echo Mage::helper('paypal')->__('API Signature') ?></label></td>
                 <td class="value">
-                    <input type="text" name="paypal_api_signature" id="field_paypal_api_signature" class="input-text" value="<?php echo Mage::getStoreConfig('payment/express_checkout_required_express_checkout/api_signature') ?>" />
+                    <input type="password" name="paypal_api_signature" id="field_paypal_api_signature" class="input-text" value="<?php echo Mage::getStoreConfig('paypal/wpp/api_signature') ?>" />
                 </td>
             </tr>
 
@@ -109,9 +111,7 @@
                         <option value="1" selected="selected"><?php echo $this->__('Yes') ?></option>
                     </select>
                 </td>
-                <td class="comment" rowspan="3">
-                    <img src="<?php echo $this->getSkinUrl('magento_localized/logo_billsafe.png') ?>" alt="BillSAFE" />
-                </td>
+                <td class="comment"></td>
             </tr>
             <?php endif ?>
 
@@ -122,6 +122,9 @@
                         <option value="0" <?php if (!Mage::getStoreConfigFlag('payment/billsafe/active')): ?>selected="selected"<?php endif ?>><?php echo $this->__('No') ?></option>
                         <option value="1" <?php if (Mage::getStoreConfigFlag('payment/billsafe/active')): ?>selected="selected"<?php endif ?>><?php echo $this->__('Yes') ?></option>
                     </select>
+                </td>
+                <td class="comment" rowspan="2">
+                    <img src="<?php echo $this->getSkinUrl('magento_localized/logo_billsafe.png') ?>" alt="BillSAFE" />
                 </td>
             </tr>
 
