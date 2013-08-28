@@ -191,3 +191,35 @@
         </table>
     </div>
 </div>
+
+
+<?php if (!Mage::getStoreConfig('magento_localized/installed_modules/ess/m2e-pro')): ?>
+
+<div class="entry-edit-head">
+    <h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('M2E Pro') ?></h4>
+    <div class="form-buttons"></div>
+</div>
+
+<div class="fieldset" id="group_m2e">
+    <div class="hor-scroll">
+        <table cellspacing="0" class="form-list">
+            <tbody>
+
+                <tr>
+                    <td class="label"><label for="field_m2e_install"><?php echo $this->__('Install M2E module') ?></label></td>
+                    <td class="value">
+                        <select name="m2e_install" id="field_m2e_install">
+                            <option value="0"><?php echo $this->__('No') ?></option>
+                            <option value="1" selected="selected"><?php echo $this->__('Yes') ?></option>
+                        </select>
+                    </td>
+                    <td class="comment">
+                        <img src="<?php echo $this->getSkinUrl('magento_localized/logo_m2e.png') ?>" alt="M2E Pro" style="padding-left: 20px;" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<?php endif ?>
