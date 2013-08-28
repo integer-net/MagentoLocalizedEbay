@@ -15,6 +15,15 @@
  */
 ?>
 
+<?php $moduleTitle = Mage::helper('magento_localized')->__(Mage::getStoreConfig('magento_localized/module_title')) ?>
+
+<div class="content-header">
+    <h3>
+        <?php echo Mage::helper('magento_localized')->__('%s Setup', $moduleTitle) ?><br />
+        <?php echo Mage::helper('magento_localized')->__('Page %s of %s', 3, 3) ?>: <?php echo $this->__('Ebay Modules Setup') ?>
+    </h3>
+</div>
+
 <div class="entry-edit-head">
     <h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('PayPal') ?></h4>
     <div class="form-buttons"></div>
