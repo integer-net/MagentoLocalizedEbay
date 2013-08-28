@@ -34,7 +34,7 @@
                     </select>
                 </td>
                 <td class="comment" rowspan="3">
-                    <img src="<?php echo $this->getSkinUrl('images/paypal/pp-alt.png') ?>" alt="PayPal" />
+                    <img src="<?php echo $this->getSkinUrl('magento_localized/logo_paypal.png') ?>" alt="PayPal" style="padding-left: 20px;" />
                 </td>
             </tr>
 
@@ -111,7 +111,9 @@
                         <option value="1" selected="selected"><?php echo $this->__('Yes') ?></option>
                     </select>
                 </td>
-                <td class="comment"></td>
+                <td class="comment" rowspan="3">
+                    <img src="<?php echo $this->getSkinUrl('magento_localized/logo_billsafe.png') ?>" alt="BillSAFE" style="padding-left: 20px;" />
+                </td>
             </tr>
             <?php endif ?>
 
@@ -123,9 +125,11 @@
                         <option value="1" <?php if (Mage::getStoreConfigFlag('payment/billsafe/active')): ?>selected="selected"<?php endif ?>><?php echo $this->__('Yes') ?></option>
                     </select>
                 </td>
+                <?php if (Mage::getStoreConfig('magento_localized/installed_modules/billsafe/billsafe')): ?>
                 <td class="comment" rowspan="2">
-                    <img src="<?php echo $this->getSkinUrl('magento_localized/logo_billsafe.png') ?>" alt="BillSAFE" />
+                    <img src="<?php echo $this->getSkinUrl('magento_localized/logo_billsafe.png') ?>" alt="BillSAFE" style="padding-left: 20px;" />
                 </td>
+                <?php endif ?>
             </tr>
 
             <tr>
