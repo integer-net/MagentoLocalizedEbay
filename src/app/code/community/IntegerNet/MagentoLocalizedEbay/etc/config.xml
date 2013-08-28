@@ -23,6 +23,11 @@
                 <class>IntegerNet_MagentoLocalizedEbay_Model</class>
             </magento_localized_ebay>
         </models>
+        <helpers>
+            <magento_localized_ebay>
+                <class>IntegerNet_MagentoLocalizedEbay_Helper</class>
+            </magento_localized_ebay>
+        </helpers>
     </global>
 
     <adminhtml>
