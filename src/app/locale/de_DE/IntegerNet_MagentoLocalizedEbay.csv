@@ -6,11 +6,13 @@
 "You can find this by logging in to the <a href=""%s"" target=""_blank"">BillSAFE payment backend</a>.","Sie finden diese Daten im <a href=""%s"" target=""_blank"">BillSAFE Payment Backend</a>."
 "Activate BillSAFE installment payment","BillSAFE-Ratenkauf aktivieren"
 "Test mode (sandbox) for BillSAFE installment payment","Testmodus (Sandbox) für BillSAFE-Ratenkauf"
+"BillSAFE is the secure invoice payment service from PayPal.","BillSAFE ist der sichere Rechnungskauf -Service von PayPal."
+"Register here now!","Jetzt hier anmelden!"
 
-"Activate PayPal Express payment","PayPal Express aktivieren"
+"Activate PayPal Express payment","&quot;Direkt zu PayPal&quot; aktivieren?"
 "Test mode (sandbox) for PayPal payment","Testmodus (Sandbox) für PayPal-Zahlungen"
 "Email Associated with PayPal Merchant Account","Email-Adresse des PayPal Händler-Kontos"
-"Ebay Modules Setup","Einrichtung von ebay-Modulen"
+"Setup of PayPal, BillSAFE and M2E","Einrichtung von PayPal, BillSAFE und M2E"
 
 "Install M2E module","M2E-Modul installieren"
 "M2E Pro is installed, but not configured yet. Click <a href=""%s"">here</a> to start the wizard.","M2E Pro wurde installiert, aber noch nicht konfiguriert. Klicken Sie <a href=""%s"">hier</a>, um den Wizard zu starten."

@@ -13,7 +13,7 @@
 <layout version="0.1.0">
     <adminhtml_magentolocalized_form>
         <reference name="magento_localized.form">
-            <block type="adminhtml/template" name="magento_localized.form.ebay" as="page3" template="magento_localized_ebay/form.phtml" />
+            <block type="magento_localized_ebay/form" name="magento_localized.form.ebay" as="page3" template="magento_localized_ebay/form.phtml" />
         </reference>
     </adminhtml_magentolocalized_form>
 </layout>

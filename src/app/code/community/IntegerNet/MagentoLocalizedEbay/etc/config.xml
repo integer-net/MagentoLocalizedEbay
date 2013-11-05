@@ -18,6 +18,11 @@
     </modules>
 
     <global>
+        <blocks>
+            <magento_localized_ebay>
+                <class>IntegerNet_MagentoLocalizedEbay_Block</class>
+            </magento_localized_ebay>
+        </blocks>
         <models>
             <magento_localized_ebay>
                 <class>IntegerNet_MagentoLocalizedEbay_Model</class>
