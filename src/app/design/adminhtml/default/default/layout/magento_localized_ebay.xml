@@ -12,6 +12,9 @@
  -->
 <layout version="0.1.0">
     <adminhtml_magentolocalized_form>
+        <reference name="head">
+            <action method="addCss"><name>magento_localized/magento_localized_ebay.css</name></action>
+        </reference>
         <reference name="magento_localized.form">
             <block type="magento_localized_ebay/form" name="magento_localized.form.ebay" as="page3" template="magento_localized_ebay/form.phtml" />
         </reference>

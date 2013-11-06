@@ -124,8 +124,17 @@
                             <option value="1" selected="selected"><?php echo $this->__('Yes') ?></option>
                         </select>
                     </td>
-                    <td class="comment" rowspan="3">
-                        <img src="<?php echo $this->getSkinUrl('magento_localized/logo_billsafe.png') ?>" alt="BillSAFE" style="padding-left: 20px;" />
+                    <td class="comment" rowspan="4">
+                        <p>
+                            <a href="<?php echo $this->getBillsafeRegisterUrl() ?>" target="_blank">
+                                <img src="<?php echo $this->getSkinUrl('magento_localized/logo_billsafe.png') ?>" alt="BillSAFE" style="padding-left: 20px;" /></p>
+                        </a>
+                        <p>
+                            <?php echo $this->__('BillSAFE is the secure invoice payment service from PayPal.') ?><br />
+                            <a href="<?php echo $this->getBillsafeRegisterUrl() ?>" target="_blank">
+                                <?php echo $this->__('Register here now!') ?>
+                            </a>
+                        </p>
                     </td>
                 </tr>
             <?php endif ?>
@@ -150,7 +159,6 @@
                                 <?php echo $this->__('Register here now!') ?>
                             </a>
                         </p>
-
                     </td>
                 <?php endif ?>
             </tr>
@@ -208,18 +216,39 @@
 </div>
 
 
-<?php if (!Mage::getStoreConfig('magento_localized/installed_modules/ess/m2e-pro')): ?>
+<div class="entry-edit-head">
+    <h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('M2E Pro') ?></h4>
+    <div class="form-buttons"></div>
+</div>
 
-    <div class="entry-edit-head">
-        <h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('M2E Pro') ?></h4>
-        <div class="form-buttons"></div>
-    </div>
+<div class="fieldset" id="group_m2e">
+    <div class="hor-scroll">
+        <table cellspacing="0" class="form-list">
+            <tbody>
 
-    <div class="fieldset" id="group_m2e">
-        <div class="hor-scroll">
-            <table cellspacing="0" class="form-list">
-                <tbody>
+            <tr>
+                <td colspan="2" class="label">
+                    <h4><?php echo $this->__('ZEIT ZU HANDELN – Steigen Sie ein und werden Sie ein erfolgreicher Verkäufer bei eBay') ?></h4>
 
+                    <p><?php echo $this->__('Wenn Sie noch kein eBay-Konto haben:') ?></p>
+                    <ul>
+                        <li><?php echo $this->__('Gehen Sie zu eBay.de und melden Sie sich an: <a href="%s" target="_blank">%s</a>', $this->getEbayRegisterUrl(), $this->getEbayRegisterUrl()) ?></li>
+                        <li><?php echo $this->__('Richten Sie ihr Verkäufer-Konto ein: <a href="%s" target="_blank">eröffnen Sie ein gewerbliches eBay-Konto</a>', $this->getEbayMerchantUrl()) ?></li>
+                        <li><?php echo $this->__('Eine Anleitung für neue gewerbliche Verkäufer finden Sie hier: <a href="%s" target="_blank">%s</a>', $this->getEbayMerchantDocumentationUrl(), $this->getEbayMerchantDocumentationUrl()) ?></li>
+                    </ul>
+
+                    <p><?php echo $this->__('Wenn Sie ihr eBay-Konto bereits eingerichtet haben:') ?></p>
+                    <ul>
+                        <li><?php echo $this->__('Installieren Sie jetzt kostenlos M2E um effizient bei eBay direkt vom Magento Shop zu verkaufen.') ?></li>
+                    </ul>
+
+                </td>
+                <td class="comment">
+                    <img src="<?php echo $this->getSkinUrl('magento_localized/logo_m2e.png') ?>" alt="M2E Pro" style="padding-left: 20px;" />
+                </td>
+            </tr>
+
+            <?php if (!Mage::getStoreConfig('magento_localized/installed_modules/ess/m2e-pro')): ?>
                 <tr>
                     <td class="label"><label for="field_m2e_install"><?php echo $this->__('Install M2E module') ?></label></td>
                     <td class="value">
@@ -229,12 +258,24 @@
                         </select>
                     </td>
                     <td class="comment">
-                        <img src="<?php echo $this->getSkinUrl('magento_localized/logo_m2e.png') ?>" alt="M2E Pro" style="padding-left: 20px;" />
                     </td>
                 </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+            <?php endif ?>
 
-<?php endif ?>
+            <tr>
+                <td colspan="2" class="label">
+                    <h4><?php echo $this->__('STARTBERATUNG - Werden Sie mit unserer Unterstützung ein erfolgreicher Verkäufer bei eBay.') ?></h4>
+
+                    <p><?php echo $this->__('Gebühren sparen und ein persönlicher Ansprechpartner für Ihren erfolgreichen Einstieg bei eBay.') ?></p>
+                    <ul>
+                        <li><?php echo $this->__('Melden Sie sich jetzt an: <a href="%s" target="_blank">%s</a>', $this->getEbayStartUrl(), $this->getEbayStartUrl()) ?></li>
+                    </ul>
+                </td>
+                <td class="comment"></td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+

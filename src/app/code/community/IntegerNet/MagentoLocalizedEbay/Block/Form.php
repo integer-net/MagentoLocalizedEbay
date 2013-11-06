@@ -14,4 +14,24 @@ class IntegerNet_MagentoLocalizedEbay_Block_Form extends Mage_Adminhtml_Block_Te
     {
         return 'http://www.billsafe.de/offer?utm_source=part&utm_medium=magento&utm_campaign=magentoDEEdition';
     }
+
+    public function getEbayRegisterUrl()
+    {
+        return 'http://pages.ebay.de/help/account/how-to-register.html';
+    }
+
+    public function getEbayMerchantUrl()
+    {
+        return 'https://scgi.ebay.de/ws/eBayISAPI.dll?RegisterEnterInfo&bizflow=2';
+    }
+
+    public function getEbayMerchantDocumentationUrl()
+    {
+        return 'http://pages.ebay.de/gewerblich-verkaufen/';
+    }
+
+    public function getEbayStartUrl()
+    {
+        return 'http://success.ebay.de/ebay-start/?id=m2e';
+    }
 }

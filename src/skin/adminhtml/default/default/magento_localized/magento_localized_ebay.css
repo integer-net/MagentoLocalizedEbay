@@ -1,0 +1,7 @@
+#group_m2e li {
+    list-style-position: inside;
+    list-style-type: disc;
+    padding-left: 1em;
+    text-indent: -1em;
+    margin-left: 0;
+}
