@@ -65,6 +65,18 @@
         </translate>
     </adminhtml>
 
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <IntegerNet_MagentoLocalizedEbay after="Mage_Adminhtml">IntegerNet_MagentoLocalizedEbay_Adminhtml</IntegerNet_MagentoLocalizedEbay>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
     <default>
         <magento_localized>
             <module_title_suffix> - ebay Edition</module_title_suffix>

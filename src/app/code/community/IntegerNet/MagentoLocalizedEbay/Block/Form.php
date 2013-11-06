@@ -8,7 +8,7 @@
  * @author     Andreas von Studnitz <avs@integer-net.de>
  */
 
-class IntegerNet_MagentoLocalizedEbay_Block_Form extends Mage_Adminhtml_Block_Template
+class IntegerNet_MagentoLocalizedEbay_Block_Form extends Mage_Adminhtml_Block_Widget
 {
     public function getBillsafeRegisterUrl()
     {

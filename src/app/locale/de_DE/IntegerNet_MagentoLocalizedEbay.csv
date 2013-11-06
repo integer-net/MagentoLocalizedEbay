@@ -16,3 +16,15 @@
 
 "Install M2E module","M2E-Modul installieren"
 "M2E Pro is installed, but not configured yet. Click <a href=""%s"">here</a> to start the wizard.","M2E Pro wurde installiert, aber noch nicht konfiguriert. Klicken Sie <a href=""%s"">hier</a>, um den Wizard zu starten."
+
+"Configure PayPal Express","PayPal Express konfigurieren"
+
+"Configure BillSAFE","BillSAFE konfigurieren"
+"Install BillSAFE","BillSAFE installieren"
+"The BillSAFE module is not installed yet.","Das BillSAFE-Modul ist noch nicht installiert."
+
+"Configure M2E Pro","M2E Pro konfigurieren"
+"Install M2E Pro","M2E Pro installieren"
+"The M2E Pro module is not installed yet.","Das M2E-Pro-Modul ist noch nicht installiert."
+
+"Install now","Jetzt installieren"

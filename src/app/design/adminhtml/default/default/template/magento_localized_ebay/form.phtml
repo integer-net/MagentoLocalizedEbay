@@ -249,17 +249,17 @@
             </tr>
 
             <?php if (!Mage::getStoreConfig('magento_localized/installed_modules/ess/m2e-pro')): ?>
-                <tr>
-                    <td class="label"><label for="field_m2e_install"><?php echo $this->__('Install M2E module') ?></label></td>
-                    <td class="value">
-                        <select name="m2e_install" id="field_m2e_install">
-                            <option value="0"><?php echo $this->__('No') ?></option>
-                            <option value="1" selected="selected"><?php echo $this->__('Yes') ?></option>
-                        </select>
-                    </td>
-                    <td class="comment">
-                    </td>
-                </tr>
+            <tr>
+                <td class="label"><label for="field_m2e_install"><?php echo $this->__('Install M2E module') ?></label></td>
+                <td class="value">
+                    <select name="m2e_install" id="field_m2e_install">
+                        <option value="0"><?php echo $this->__('No') ?></option>
+                        <option value="1" selected="selected"><?php echo $this->__('Yes') ?></option>
+                    </select>
+                </td>
+                <td class="comment">
+                </td>
+            </tr>
             <?php endif ?>
 
             <tr>
