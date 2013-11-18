@@ -5,3 +5,13 @@
     text-indent: -1em;
     margin-left: 0;
 }
+
+.adminhtml-magentolocalized-form .entry-edit-head img {
+    padding: 5px 10px 0;
+    margin-top: 5px;
+    background: #ffffff;
+}
+
+.adminhtml-magentolocalized-form .tooltip {
+    max-width: 200px;
+} 
