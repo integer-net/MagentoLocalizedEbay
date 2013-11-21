@@ -32,7 +32,7 @@
     </h4>
 
     <script type="text/javascript">
-        new Tooltip('paypal_header_logo', '<?php echo $this->__('Was ist PayPal?') ?>');
+        new Tooltip('paypal_header_logo', '<?php echo $this->__('What is PayPal? ') ?>');
     </script>
 
     <div class="form-buttons"></div>
@@ -89,7 +89,7 @@
                     </select>
                 </td>
                 <td class="comment" rowspan="2">
-                    <a href="<?php echo $this->getPayPalDirectUrl() ?>" id="paypal_direct_info">
+                    <a href="<?php echo $this->getPayPalDirectUrl() ?>" target="_blank" id="paypal_direct_info">
                         <img src="<?php echo $this->getSkinUrl('images/i_question-mark.png') ?>" alt="" />
                     </a>
                     
@@ -122,6 +122,12 @@
                 </td>
             </tr>
 
+            <tr>
+                <td class="label" colspan="3">
+                    <?php echo $this->__('Sie haben die Möglichkeit, <a href="%s" target="_blank">erweiterte Einstellungen für PayPal</a> vorzunehmen, nachdem Sie die Einstellung hier beendet haben.', $this->getPayPalConfigUrl()) ?>
+                </td>
+            </tr>
+
             </tbody>
         </table>
     </div>
@@ -130,8 +136,15 @@
 
 <div class="entry-edit-head">
     <h4 class="icon-head head-edit-form fieldset-legend">
-        <img src="<?php echo $this->getSkinUrl('magento_localized/logo_billsafe.png') ?>" alt="<?php echo $this->__('BillSAFE') ?>" />
+        <a href="<?php echo $this->getBillsafeRegisterUrl() ?>" target="_blank" id="billsafe_header_logo">
+            <img src="<?php echo $this->getSkinUrl('magento_localized/logo_billsafe.png') ?>" alt="<?php echo $this->__('BillSAFE') ?>" />
+        </a>
     </h4>
+
+    <script type="text/javascript">
+        new Tooltip('billsafe_header_logo', '<?php echo $this->__('What is BillSAFE?') ?>');
+    </script>
+
     <div class="form-buttons"></div>
 </div>
 
@@ -150,17 +163,13 @@
                         </select>
                     </td>
                     <td class="comment" rowspan="4">
-                        <p>
-                            <a href="<?php echo $this->getBillsafeRegisterUrl() ?>" target="_blank"></a>
-                                
-                        </p>
+                        <a href="<?php echo $this->getBillsafeRegisterUrl() ?>" target="_blank" id="billsafe_direct_info">
+                            <img src="<?php echo $this->getSkinUrl('images/i_question-mark.png') ?>" alt="" />
                         </a>
-                        <p>
-                            <?php echo $this->__('BillSAFE is the secure invoice payment service from PayPal.') ?><br />
-                            <a href="<?php echo $this->getBillsafeRegisterUrl() ?>" target="_blank">
-                                <?php echo $this->__('Register here now!') ?>
-                            </a>
-                        </p>
+
+                        <script type="text/javascript">
+                            new Tooltip('billsafe_direct_info', '<?php echo $this->__('BillSAFE is the secure invoice payment service from PayPal. Klick here to get more info or register now.') ?>')
+                        </script>
                     </td>
                 </tr>
             <?php endif ?>
@@ -175,17 +184,13 @@
                 </td>
                 <?php if (Mage::getStoreConfig('magento_localized/installed_modules/billsafe/billsafe')): ?>
                     <td class="comment" rowspan="3">
-                        <p>
-                            <a href="<?php echo $this->getBillsafeRegisterUrl() ?>" target="_blank">
-                            </a>
-                        </p>
+                        <a href="<?php echo $this->getBillsafeRegisterUrl() ?>" target="_blank" id="billsafe_direct_info">
+                            <img src="<?php echo $this->getSkinUrl('images/i_question-mark.png') ?>" alt="" />
                         </a>
-                        <p>
-                            <?php echo $this->__('BillSAFE is the secure invoice payment service from PayPal.') ?><br />
-                            <a href="<?php echo $this->getBillsafeRegisterUrl() ?>" target="_blank">
-                                <?php echo $this->__('Register here now!') ?>
-                            </a>
-                        </p>
+
+                        <script type="text/javascript">
+                            new Tooltip('billsafe_direct_info', '<?php echo $this->__('BillSAFE is the secure invoice payment service from PayPal. Klick here to get more info or register now.') ?>')
+                        </script>
                     </td>
                 <?php endif ?>
             </tr>
@@ -211,10 +216,11 @@
                 <td class="label"><label for="field_billsafe_merchant_license"><?php echo $this->__('License Key') ?></label></td>
                 <td class="value">
                     <input type="text" name="billsafe_merchant_license" id="field_billsafe_merchant_license" class="input-text" value="<?php echo Mage::getStoreConfig('payment/billsafe/merchant_license') ?>" />
+                    <p class="note">
+                        <?php echo $this->__('You can find this by logging in to the <a href="%s" target="_blank">BillSAFE payment backend</a>.', 'https://client.billsafe.de/main/mainmenu') ?>
+                    </p>
                 </td>
-                <td class="comment">
-                    <?php echo $this->__('You can find this by logging in to the <a href="%s" target="_blank">BillSAFE payment backend</a>.', 'https://client.billsafe.de/main/mainmenu') ?>
-                </td>
+                <td class="comment"></td>
             </tr>
 
             <tr>

@@ -102,6 +102,7 @@
                 <sort_order>20</sort_order>
                 <visible_on_cart>1</visible_on_cart>
                 <visible_on_product>0</visible_on_product>
+                <payment_action>Sale</payment_action>
             </paypal_express>
         </payment>
     </default>

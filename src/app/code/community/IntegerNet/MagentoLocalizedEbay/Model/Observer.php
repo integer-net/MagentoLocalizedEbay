@@ -26,6 +26,13 @@ class IntegerNet_MagentoLocalizedEbay_Model_Observer
         $this->_setConfigData('payment/billsafe_installment/active', $params['billsafe_installment_active']);
         $this->_setConfigData('payment/billsafe_installment/sandbox', $params['billsafe_installment_sandbox']);
 
+        if ($params['paypal_active'] && !Mage::getStoreConfigFlag('payment/paypal_express/active')) {
+            Mage::getSingleton('adminhtml/session')->addSuccess(Mage::helper('magento_localized_ebay')->__(
+                'You have successfully activated PayPal payment. Anytime you have the possibility to select advanced settings <a href="%s">here</a>.',
+                Mage::helper('adminhtml')->getUrl('adminhtml/magentolocalizedebay/paypal')
+            ));
+        }
+
         $this->_setConfigData('payment/paypal_express/active', $params['paypal_active']);
         $this->_setConfigData('paypal/wpp/sandbox_flag', $params['paypal_sandbox']);
         $this->_setConfigData('paypal/general/business_account', $params['paypal_express_email']);

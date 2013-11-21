@@ -20,6 +20,11 @@ class IntegerNet_MagentoLocalizedEbay_Block_Form extends Mage_Adminhtml_Block_Wi
         return Mage::helper('adminhtml')->getUrl('adminhtml/magentolocalizedebay/paypalPopup');
     }
 
+    public function getPayPalConfigUrl()
+    {
+        return Mage::helper('adminhtml')->getUrl('adminhtml/magentolocalizedebay/paypal');
+    }
+
     public function getBillsafeRegisterUrl()
     {
         return 'http://www.billsafe.de/offer?utm_source=part&utm_medium=magento&utm_campaign=magentoDEEdition';
