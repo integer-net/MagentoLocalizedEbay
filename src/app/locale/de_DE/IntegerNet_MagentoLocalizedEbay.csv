@@ -13,9 +13,9 @@
 
 "Activate PayPal Express payment","&quot;Direkt zu PayPal&quot; aktivieren?"
 "Test mode (sandbox) for PayPal payment","Testmodus (Sandbox) für PayPal-Zahlungen"
-"Email Associated with PayPal Merchant Account","Email-Adresse des PayPal Händler-Kontos"
+"IntegerNet_MagentoLocalizedEbay::Email Associated with PayPal Merchant Account","Email-Adresse des PayPal Händler-Kontos"
 "Setup of PayPal, BillSAFE and M2E","Einrichtung von PayPal, BillSAFE und M2E"
-"What is PayPal? ","Was ist PayPal?"
+"IntegerNet_MagentoLocalizedEbay::What is PayPal?","Was ist PayPal?"
 
 "Install M2E module","M2E-Modul installieren"
 "M2E Pro is installed, but not configured yet. Click <a href=""%s"">here</a> to start the wizard.","M2E Pro wurde installiert, aber noch nicht konfiguriert. Klicken Sie <a href=""%s"">hier</a>, um den Wizard zu starten."
@@ -34,3 +34,6 @@
 "Install now","Jetzt installieren"
 
 "You have successfully activated PayPal payment. Anytime you have the possibility to select advanced settings <a href=""%s"">here</a>.","Sie haben die Zahlungsart PayPal erfolgreich eingerichtet. Sie haben jederzeit die Möglichkeit, erweiterte Einstellungen <a href=""%s"">hier</a> vorzunehmen."
+
+"IntegerNet_MagentoLocalizedEbay::No","Nein"
+"IntegerNet_MagentoLocalizedEbay::Yes","Ja"
