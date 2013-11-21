@@ -251,8 +251,15 @@
 
 <div class="entry-edit-head">
     <h4 class="icon-head head-edit-form fieldset-legend">
-        <img src="<?php echo $this->getSkinUrl('magento_localized/logo_m2e.png') ?>" alt="<?php echo $this->__('M2E Pro') ?>" style="padding-bottom: 5px;" />
+        <a href="<?php echo $this->getM2EUrl() ?>" target="_blank" id="m2e_header_logo">
+            <img src="<?php echo $this->getSkinUrl('magento_localized/logo_m2e.png') ?>" alt="<?php echo $this->__('M2E Pro') ?>" style="padding-bottom: 5px;" />
+        </a>
     </h4>
+
+    <script type="text/javascript">
+        new Tooltip('m2e_header_logo', '<?php echo $this->__('What is M2E Pro?') ?>');
+    </script>
+
     <div class="form-buttons"></div>
 </div>
 
@@ -262,7 +269,7 @@
             <tbody>
 
             <tr>
-                <td colspan="2" class="label">
+                <td colspan="2" class="label m2e-label">
                     <h4><?php echo $this->__('ZEIT ZU HANDELN – Steigen Sie ein und werden Sie ein erfolgreicher Verkäufer bei eBay') ?></h4>
 
                     <p><?php echo $this->__('Wenn Sie noch kein eBay-Konto haben:') ?></p>
@@ -293,12 +300,19 @@
                         </select>
                     </td>
                     <td class="comment">
+                        <a href="<?php echo $this->getM2EUrl() ?>" target="_blank" id="m2e_direct_info">
+                            <img src="<?php echo $this->getSkinUrl('images/i_question-mark.png') ?>" alt="" />
+                        </a>
+
+                        <script type="text/javascript">
+                            new Tooltip('m2e_direct_info', '<?php echo $this->__('M2E Pro - eBay / Amazon / Rakuten Magento Integration.') ?>')
+                        </script>
                     </td>
                 </tr>
             <?php endif ?>
 
             <tr>
-                <td colspan="2" class="label">
+                <td colspan="2" class="label m2e-label">
                     <h4><?php echo $this->__('STARTBERATUNG - Werden Sie mit unserer Unterstützung ein erfolgreicher Verkäufer bei eBay.') ?></h4>
 
                     <p><?php echo $this->__('Gebühren sparen und ein persönlicher Ansprechpartner für Ihren erfolgreichen Einstieg bei eBay.') ?></p>

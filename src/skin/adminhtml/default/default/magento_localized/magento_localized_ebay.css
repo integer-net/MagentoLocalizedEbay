@@ -12,6 +12,11 @@
     background: #ffffff;
 }
 
+.adminhtml-magentolocalized-form .form-list td.m2e-label {
+    background: #ffffff !important;
+    border: 1px solid #D6D6D6 !important;
+}
+
 .adminhtml-magentolocalized-form .tooltip {
     max-width: 200px;
 } 

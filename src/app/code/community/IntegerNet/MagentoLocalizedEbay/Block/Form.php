@@ -49,4 +49,9 @@ class IntegerNet_MagentoLocalizedEbay_Block_Form extends Mage_Adminhtml_Block_Wi
     {
         return 'http://success.ebay.de/ebay-start/?id=m2e';
     }
+
+    public function getM2EUrl()
+    {
+        return 'http://m2epro.com/';
+    }
 }
