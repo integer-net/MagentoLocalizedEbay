@@ -26,8 +26,15 @@
 
 <div class="entry-edit-head">
     <h4 class="icon-head head-edit-form fieldset-legend">
-        <img src="<?php echo $this->getSkinUrl('magento_localized/logo_paypal.png') ?>" alt="<?php echo $this->__('PayPal') ?>" />
+        <a href="<?php echo $this->getPayPalPopupUrl() ?>" id="paypal_header_logo" onclick="window.open(this.href, 'paypal', 'width=750,height=600;'); return false;">
+            <img src="<?php echo $this->getSkinUrl('magento_localized/logo_paypal.png') ?>" alt="<?php echo $this->__('PayPal') ?>" />
+        </a>
     </h4>
+
+    <script type="text/javascript">
+        new Tooltip('paypal_header_logo', '<?php echo $this->__('Was ist PayPal?') ?>');
+    </script>
+
     <div class="form-buttons"></div>
 </div>
 

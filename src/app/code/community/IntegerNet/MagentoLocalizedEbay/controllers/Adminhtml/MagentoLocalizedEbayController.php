@@ -16,6 +16,12 @@ class IntegerNet_MagentoLocalizedEbay_Adminhtml_MagentoLocalizedEbayController e
         $this->_forward('edit', 'system_config', 'admin', array('section' => 'payment'));
     }
 
+    public function paypalPopupAction()
+    {
+        $this->loadLayout();
+        $this->renderLayout();
+    }
+
     public function m2eAction()
     {
         if (Mage::getStoreConfig('magento_localized/installed_modules/ess/m2e-pro')) {

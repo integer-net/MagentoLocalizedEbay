@@ -21,4 +21,9 @@
             <block type="magento_localized_ebay/form" name="magento_localized.form.ebay" as="page3" template="magento_localized_ebay/form.phtml" />
         </reference>
     </adminhtml_magentolocalized_form>
+
+    <adminhtml_magentolocalizedebay_paypalpopup>
+        <action method="unsetChild"><name>root</name></action>
+        <block type="core/template" name="root" template="magento_localized_ebay/paypal_popup.phtml" output="toHtml" />
+    </adminhtml_magentolocalizedebay_paypalpopup>
 </layout>

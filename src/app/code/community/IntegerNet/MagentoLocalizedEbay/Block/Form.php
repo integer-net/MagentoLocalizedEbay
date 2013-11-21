@@ -14,6 +14,12 @@ class IntegerNet_MagentoLocalizedEbay_Block_Form extends Mage_Adminhtml_Block_Wi
     {
         return 'https://www.paypal.com/webapps/mpp/referral/paypal-express-checkout?partner_id=NB9WWHYEMVUMS';
     }
+
+    public function getPayPalPopupUrl()
+    {
+        return Mage::helper('adminhtml')->getUrl('adminhtml/magentolocalizedebay/paypalPopup');
+    }
+
     public function getBillsafeRegisterUrl()
     {
         return 'http://www.billsafe.de/offer?utm_source=part&utm_medium=magento&utm_campaign=magentoDEEdition';
