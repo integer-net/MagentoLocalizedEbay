@@ -15,7 +15,7 @@
 "Test mode (sandbox) for PayPal payment","Testmodus (Sandbox) für PayPal-Zahlungen"
 "IntegerNet_MagentoLocalizedEbay::Email Associated with PayPal Merchant Account","Email-Adresse des PayPal Händler-Kontos"
 "Setup of PayPal, BillSAFE and M2E","Einrichtung von PayPal, BillSAFE und M2E"
-"IntegerNet_MagentoLocalizedEbay::What is PayPal?","Was ist PayPal?"
+"IntegerNet_MagentoLocalizedEbay::What is PayPal? Click for more info or to register.","Was ist PayPal? Klicken Sie hier für mehr Informationen oder zum Anmelden."
 
 "Install M2E module","M2E-Modul installieren"
 "M2E Pro is installed, but not configured yet. Click <a href=""%s"">here</a> to start the wizard.","M2E Pro wurde installiert, aber noch nicht konfiguriert. Klicken Sie <a href=""%s"">hier</a>, um den Wizard zu starten."
