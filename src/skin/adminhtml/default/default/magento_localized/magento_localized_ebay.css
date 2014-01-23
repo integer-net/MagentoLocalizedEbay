@@ -1,15 +1,23 @@
+.magento-localized-ebay-setup .col2-set .col-1 {
+    max-width: 520px;
+}
+
+.magento-localized-ebay-setup .col2-set .col-2,
+.magento-localized-ebay-setup .form-list .comment {
+    max-width: 434px;
+    padding-left: 20px;
+}
+
+.magento-localized-ebay-setup .form-list .comment a {
+    color: #EA7601;
+}
+
 #group_m2e li {
     list-style-position: inside;
     list-style-type: disc;
     padding-left: 1em;
     text-indent: -1em;
     margin-left: 0;
-}
-
-.adminhtml-magentolocalized-form .entry-edit-head img {
-    padding: 5px 10px 0;
-    margin-top: 5px;
-    background: #ffffff;
 }
 
 .adminhtml-magentolocalized-form .form-list td.m2e-label {

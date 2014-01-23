@@ -22,34 +22,73 @@
         <?php echo Mage::helper('magento_localized')->__('%s Setup', $moduleTitle) ?><br />
     </h3>
 </div>
-<h3><?php echo Mage::helper('magento_localized')->__('Page %s of %s', 3, 3) ?>: <?php echo $this->__('Setup of PayPal, BillSAFE and M2E') ?></h3>
+<h3><?php echo Mage::helper('magento_localized')->__('Page %s of %s', 3, 3) ?>: <?php echo $this->__('Setup of modules powered by ebay') ?></h3>
 
 <div class="entry-edit-head">
-    <h4 class="icon-head head-edit-form fieldset-legend">
-        <a href="<?php echo $this->getPayPalPopupUrl() ?>" id="paypal_header_logo" onclick="window.open(this.href, 'paypal', 'width=750,height=600;'); return false;">
-            <img src="<?php echo $this->getSkinUrl('magento_localized/logo_paypal.png') ?>" alt="<?php echo $this->__('PayPal') ?>" />
-        </a>
-    </h4>
-
-    <script type="text/javascript">
-        new Tooltip('paypal_header_logo', '<?php echo $this->__('What is PayPal? Click for more info or to register.') ?>');
-    </script>
+    <h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('PayPal') ?></h4>
 
     <div class="form-buttons"></div>
 </div>
 
-<div class="fieldset" id="group_paypal">
+<div class="fieldset magento-localized-ebay-setup" id="group_paypal">
     <div class="hor-scroll">
+        <div class="col2-set">
+            <div class="col-1">
+                <div class="short-description-area">
+
+                </div>
+                <div class="benefits-area">
+
+                </div>
+                <div class="general-lead-area">
+
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="logo-area">
+                    <a href="<?php echo $this->getPayPalPopupUrl() ?>" id="paypal_header_logo" onclick="window.open(this.href, 'paypal', 'width=750,height=600;'); return false;">
+                        <img src="<?php echo $this->getSkinUrl('magento_localized/logo_paypal.png') ?>" alt="<?php echo $this->__('PayPal') ?>" />
+                    </a>
+                    <script type="text/javascript">
+                        new Tooltip('paypal_header_logo', '<?php echo $this->__('What is PayPal? Click for more info or to register.') ?>');
+                    </script>
+                </div>
+                <div class="image-graphic-area">
+
+                </div>
+            </div>
+        </div>
+
         <table cellspacing="0" class="form-list">
             <tbody>
 
             <tr>
-                <td class="label"><label for="field_paypal_express_email"><?php echo $this->__('Email Associated with PayPal Merchant Account') ?></label></td>
+                <td class="label" rowspan="2"><label for="field_paypal_express_email"><?php echo $this->__('Email Associated with PayPal Merchant Account') ?></label></td>
                 <td class="value">
                     <input type="text" name="paypal_express_email" id="field_paypal_express_email" class="input-text" value="<?php echo Mage::getStoreConfig('paypal/general/business_account') ?>" />
                 </td>
-                <td class="comment" rowspan="3">
-                    
+                <td class="comment">
+                    <?php echo $this->__('Please enter the e-mail address of your PayPal merchant account.') ?>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="value">
+                    <div class="pp-buttons-container">
+                        <button id="payment_express_checkout_required_express_checkout_api_wizard" type="button" class="scalable" onclick="javascript:window.open('https://www.paypal.com/us/cgi-bin/webscr?cmd=_login-api-run', 'apiwizard','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, ,left=100, top=100, width=380, height=470'); return false;">
+                            <span><span><span><?php echo Mage::helper('paypal')->__('Get Credentials from PayPal') ?></span></span></span>
+                        </button>
+                    </div>
+                </td>
+                <td class="comment" rowspan="8">
+                    <p><?php echo $this->__(
+                            'The information on setting the PayPal API you will find in your PayPal merchant account under the menu item PayPal &gt; My account &gt; My profile &gt; Merchant &gt; <a href="%s" target="_blank">API access</a>.',
+                            $this->getPayPalApiUrl()
+                        ) ?></p>
+                    <p><?php echo $this->__(
+                            'You have any further questions about your merchant account? <a href="%s" target="_blank">Please click here</a>.',
+                            $this->getPayPalMerchantUrl()
+                        ) ?></p>
                 </td>
             </tr>
 
@@ -68,16 +107,20 @@
             </tr>
 
             <tr>
-                <td class="label"><label for="field_paypal_api_signature"><?php echo Mage::helper('paypal')->__('API Signature') ?></label></td>
+                <td class="label" rowspan="2"><label for="field_paypal_api_signature"><?php echo Mage::helper('paypal')->__('API Signature') ?></label></td>
                 <td class="value">
                     <input type="password" name="paypal_api_signature" id="field_paypal_api_signature" class="input-text" value="<?php echo Mage::getStoreConfig('paypal/wpp/api_signature') ?>" />
-                </td>
-                <td class="comment" rowspan="2">
                 </td>
             </tr>
 
             <tr>
-                <td colspan="2">&nbsp;</td>
+                <td class="label">
+                    <div class="pp-buttons-container">
+                        <button id="sandbox_payment_express_checkout_required_express_checkout_api_wizard" type="button" class="scalable" onclick="javascript:window.open('https://www.sandbox.paypal.com/us/cgi-bin/webscr?cmd=_login-api-run', 'apiwizard','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, ,left=100, top=100, width=380, height=470'); return false;">
+                            <span><span><span><?php echo Mage::helper('paypal')->__('Sandbox Credentials') ?></span></span></span>
+                        </button>
+                    </div>
+                </td>
             </tr>
 
             <tr>
@@ -87,15 +130,6 @@
                         <option value="0" <?php if (!Mage::getStoreConfigFlag('payment/paypal_express/active')): ?>selected="selected"<?php endif ?>><?php echo $this->__('No') ?></option>
                         <option value="1" <?php if (Mage::getStoreConfigFlag('payment/paypal_express/active')): ?>selected="selected"<?php endif ?>><?php echo $this->__('Yes') ?></option>
                     </select>
-                </td>
-                <td class="comment" rowspan="2">
-                    <a href="<?php echo $this->getPayPalDirectUrl() ?>" target="_blank" id="paypal_direct_info">
-                        <img src="<?php echo $this->getSkinUrl('images/i_question-mark.png') ?>" alt="" />
-                    </a>
-                    
-                    <script type="text/javascript">
-                        new Tooltip('paypal_direct_info', '<?php echo $this->__('Über den Express-Kauf-Button freuen sich Ihre Kunden, denn sie bezahlen mit zwei Klicks und fühlen sich sicher. Auch Sie profitieren: Weniger Kaufabbrüche und damit mehr Umsatz. Ihre Kunden werden hiermit vom Warenkorb direkt zu PayPal geleitet, bezahlen und Sie erhalten die Lieferadresse und Zahlungsbestätigung von PayPal. <br /><br />Klicken Sie hier, um mehr zu erfahren.') ?>')
-                    </script>
                 </td>
             </tr>
 
@@ -108,23 +142,10 @@
                     </select>
                 </td>
             </tr>
-            
-            <tr>
-                <td class="label" colspan="3">
-                    <div class="pp-buttons-container">
-                        <button id="payment_express_checkout_required_express_checkout_api_wizard" type="button" class="scalable" onclick="javascript:window.open('https://www.paypal.com/us/cgi-bin/webscr?cmd=_login-api-run', 'apiwizard','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, ,left=100, top=100, width=380, height=470'); return false;">
-                            <span><span><span><?php echo Mage::helper('paypal')->__('Get Credentials from PayPal') ?></span></span></span>
-                        </button>
-                        <button id="sandbox_payment_express_checkout_required_express_checkout_api_wizard" type="button" class="scalable" onclick="javascript:window.open('https://www.sandbox.paypal.com/us/cgi-bin/webscr?cmd=_login-api-run', 'apiwizard','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, ,left=100, top=100, width=380, height=470'); return false;">
-                            <span><span><span><?php echo Mage::helper('paypal')->__('Sandbox Credentials') ?></span></span></span>
-                        </button>
-                    </div>
-                </td>
-            </tr>
 
             <tr>
-                <td class="label" colspan="3">
-                    <?php echo $this->__('Sie haben die Möglichkeit, <a href="%s" target="_blank">erweiterte Einstellungen für PayPal</a> vorzunehmen, nachdem Sie die Einstellung hier beendet haben.', $this->getPayPalConfigUrl()) ?>
+                <td class="label" colspan="2">
+                    <?php echo $this->__('You have the option to make <a href="%s" target="_blank">further settings for PayPal</a> after you finished the setup here.', $this->getPayPalConfigUrl()) ?>
                 </td>
             </tr>
 
@@ -148,7 +169,7 @@
     <div class="form-buttons"></div>
 </div>
 
-<div class="fieldset" id="group_billsafe">
+<div class="fieldset magento-localized-ebay-setup" id="group_billsafe">
     <div class="hor-scroll">
         <table cellspacing="0" class="form-list">
             <tbody>
@@ -264,7 +285,7 @@
 </div>
 
 <?php if (!Mage::getStoreConfig('magento_localized/installed_modules/ess/m2e-pro')): ?>
-<div class="fieldset" id="group_m2e">
+<div class="fieldset magento-localized-ebay-setup" id="group_m2e">
     <div class="hor-scroll">
         <table cellspacing="0" class="form-list">
             <tbody>
