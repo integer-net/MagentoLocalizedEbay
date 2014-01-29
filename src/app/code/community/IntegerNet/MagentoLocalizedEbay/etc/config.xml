@@ -22,6 +22,11 @@
             <magento_localized_ebay>
                 <class>IntegerNet_MagentoLocalizedEbay_Block</class>
             </magento_localized_ebay>
+            <adminhtml>
+                <rewrite>
+                    <page_head>IntegerNet_MagentoLocalizedEbay_Block_Adminhtml_Page_Head</page_head>
+                </rewrite>
+            </adminhtml>
         </blocks>
         <models>
             <magento_localized_ebay>
