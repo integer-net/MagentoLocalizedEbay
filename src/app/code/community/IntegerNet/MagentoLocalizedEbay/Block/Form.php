@@ -10,6 +10,43 @@
 
 class IntegerNet_MagentoLocalizedEbay_Block_Form extends Mage_Adminhtml_Block_Widget
 {
+    protected $_htmlData = null;
+
+    /**
+     * @param string $moduleName i.e. 'paypal'
+     * @param string $areaName i.e. 'short_description'
+     * @return string
+     */
+    public function getAreaHtml($moduleName, $areaName)
+    {
+        $htmlData = $this->_getHtmlData();
+        if (isset($htmlData['ebay'][$moduleName][$areaName])) {
+            return $htmlData['ebay'][$moduleName][$areaName];
+        }
+        return 'text';
+    }
+
+    /**
+     * @return array
+     */
+    protected function _getHtmlData()
+    {
+        if (is_null($this->_htmlData)) {
+            $filename = Mage::getModuleDir('etc', 'IntegerNet_MagentoLocalizedEbay') . DS . 'htmldata.json';
+            if (is_readable($filename)) {
+                $fileContents = file_get_contents($filename);
+                try {
+                    $this->_htmlData = Zend_Json::decode($fileContents);
+                } catch (Exception $e) {
+                    Mage::logException($e);
+                    $this->_htmlData = array();
+                }
+            }
+        }
+        
+        return $this->_htmlData;
+    }
+    
     public function getPayPalDirectUrl()
     {
         return 'https://www.paypal.com/webapps/mpp/referral/paypal-express-checkout?partner_id=NB9WWHYEMVUMS';

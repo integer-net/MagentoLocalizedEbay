@@ -1,11 +1,27 @@
 .magento-localized-ebay-setup .col2-set .col-1 {
     max-width: 520px;
+    float: left;
 }
 
 .magento-localized-ebay-setup .col2-set .col-2,
 .magento-localized-ebay-setup .form-list .comment {
     max-width: 434px;
     padding-left: 20px;
+    float: left;
+}
+
+.magento-localized-ebay-setup .col2-set {
+    max-width: 974px;
+}
+
+.magento-localized-ebay-setup .col2-set:after {
+    display: block;
+    content: ".";
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+    height: 0;
+    overflow: hidden;
 }
 
 .magento-localized-ebay-setup .form-list .comment a {

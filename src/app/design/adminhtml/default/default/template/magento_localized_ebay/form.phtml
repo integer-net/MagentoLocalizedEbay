@@ -33,26 +33,21 @@
         <div class="col2-set">
             <div class="col-1">
                 <div class="short-description-area">
-
+                    <?php echo $this->getAreaHtml('paypal', 'short_description') ?>
                 </div>
                 <div class="benefits-area">
-
+                    <?php echo $this->getAreaHtml('paypal', 'benefits_description') ?>
                 </div>
                 <div class="general-lead-area">
-
+                    <?php echo $this->getAreaHtml('paypal', 'general_lead_area') ?>
                 </div>
             </div>
             <div class="col-2">
                 <div class="logo-area">
-                    <a href="<?php echo $this->getPayPalPopupUrl() ?>" id="paypal_header_logo" onclick="window.open(this.href, 'paypal', 'width=750,height=600;'); return false;">
-                        <img src="<?php echo $this->getSkinUrl('magento_localized/logo_paypal.png') ?>" alt="<?php echo $this->__('PayPal') ?>" />
-                    </a>
-                    <script type="text/javascript">
-                        new Tooltip('paypal_header_logo', '<?php echo $this->__('What is PayPal? Click for more info or to register.') ?>');
-                    </script>
+                    <?php echo $this->getAreaHtml('paypal', 'partner_logo') ?>
                 </div>
                 <div class="image-graphic-area">
-
+                    <?php echo $this->getAreaHtml('paypal', 'image_graphic') ?>
                 </div>
             </div>
         </div>
@@ -159,6 +154,28 @@
 
 <div class="fieldset magento-localized-ebay-setup" id="group_billsafe">
     <div class="hor-scroll">
+        <div class="col2-set">
+            <div class="col-1">
+                <div class="short-description-area">
+                    <?php echo $this->getAreaHtml('billsafe', 'short_description') ?>
+                </div>
+                <div class="benefits-area">
+                    <?php echo $this->getAreaHtml('billsafe', 'benefits_description') ?>
+                </div>
+                <div class="general-lead-area">
+                    <?php echo $this->getAreaHtml('billsafe', 'general_lead_area') ?>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="logo-area">
+                    <?php echo $this->getAreaHtml('billsafe', 'partner_logo') ?>
+                </div>
+                <div class="image-graphic-area">
+                    <?php echo $this->getAreaHtml('billsafe', 'image_graphic') ?>
+                </div>
+            </div>
+        </div>
+
         <table cellspacing="0" class="form-list">
             <tbody>
 
@@ -265,6 +282,28 @@
 <?php if (!Mage::getStoreConfig('magento_localized/installed_modules/ess/m2e-pro')): ?>
 <div class="fieldset magento-localized-ebay-setup" id="group_m2e">
     <div class="hor-scroll">
+        <div class="col2-set">
+            <div class="col-1">
+                <div class="short-description-area">
+                    <?php echo $this->getAreaHtml('m2e', 'short_description') ?>
+                </div>
+                <div class="benefits-area">
+                    <?php echo $this->getAreaHtml('m2e', 'benefits_description') ?>
+                </div>
+                <div class="general-lead-area">
+                    <?php echo $this->getAreaHtml('m2e', 'general_lead_area') ?>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="logo-area">
+                    <?php echo $this->getAreaHtml('m2e', 'partner_logo') ?>
+                </div>
+                <div class="image-graphic-area">
+                    <?php echo $this->getAreaHtml('m2e', 'image_graphic') ?>
+                </div>
+            </div>
+        </div>
+
         <table cellspacing="0" class="form-list">
             <tbody>
 
