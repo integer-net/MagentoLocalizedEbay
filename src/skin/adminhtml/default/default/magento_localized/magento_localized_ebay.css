@@ -2,6 +2,9 @@
     max-width: 520px;
     float: left;
 }
+.magento-localized-ebay-setup td.label {
+    width: 230px;
+}
 
 .magento-localized-ebay-setup .col2-set .col-2,
 .magento-localized-ebay-setup .form-list .comment {
