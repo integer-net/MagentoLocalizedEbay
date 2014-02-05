@@ -20,10 +20,8 @@ class IntegerNet_MagentoLocalizedEbay_Helper_Data extends Mage_Core_Helper_Abstr
             $htmlData = $this->_getHtmlDataFromWeb();
             if (sizeof($htmlData)) {
                 $this->_htmlData = $htmlData;
-                Mage::log('web');
             } else {
                 $this->_htmlData = $this->_getHtmlDataFromFile();
-                Mage::log('file');
             }
         }
 

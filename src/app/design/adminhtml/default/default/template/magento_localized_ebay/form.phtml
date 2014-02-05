@@ -283,7 +283,6 @@
     <h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('M2E Pro') ?></h4>
 </div>
 
-<?php if (!Mage::getStoreConfig('magento_localized/installed_modules/ess/m2e-pro')): ?>
 <div class="fieldset magento-localized-ebay-setup" id="group_m2e">
     <div class="hor-scroll">
         <div class="col2-set">
@@ -307,6 +306,8 @@
                 </div>
             </div>
         </div>
+
+        <?php if (!Mage::getStoreConfig('magento_localized/installed_modules/ess/m2e-pro')): ?>
 
         <hr />
 
@@ -334,7 +335,7 @@
 
             </tbody>
         </table>
+        <?php endif ?>
     </div>
 </div>
 
-<?php endif ?>
