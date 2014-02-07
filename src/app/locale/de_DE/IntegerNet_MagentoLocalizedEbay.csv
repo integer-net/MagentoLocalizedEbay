@@ -20,7 +20,7 @@
 "Please enter the e-mail address of your PayPal merchant account.","Bitte tragen Sie hier die E-Mail-Adresse Ihres PayPal Händlerkontos ein."
 "The information on setting the PayPal API you will find in your PayPal merchant account under the menu item PayPal &gt; My account &gt; My profile &gt; Merchant &gt; <a href=""%s"" target=""_blank"">API access</a>.","Die Informationen zur Einstellung der PayPal API finden Sie in Ihrem PayPal Händlerkonto unter dem Menüpunkt PayPal &gt; Mein Konto &gt; Mein Profil &gt; Verkäufer/ Händler &gt; <a href=""%s"" target=""_blank"">API-Zugriff</a>."
 "You have any further questions about your merchant account? <a href=""%s"" target=""_blank"">Please click here</a>.","Sie haben weitere Fragen zu Ihrem Händlerkonto? <a href=""%s"" target=""_blank"">Klicken Sie hier</a>."
-"You have the option to make <a href=""%s"" target=""_blank"">further settings for PayPal</a> after you finished the setup here.","Sie haben die Möglichkeit, <a href=""%s"" target=""_blank"">erweiterte Einstellungen für PayPal</a> vorzunehmen, nachdem Sie die Einstellung hier beendet haben."
+"You have the option to make further settings for PayPal after you finished the setup here.","Sie haben die Möglichkeit, erweiterte Einstellungen für PayPal vorzunehmen, nachdem Sie die Einstellung hier beendet haben."
 
 "Install M2E module","M2E-Modul installieren"
 "M2E Pro is installed, but not configured yet. Click <a href=""%s"">here</a> to start the wizard.","M2E Pro wurde installiert, aber noch nicht konfiguriert. Klicken Sie <a href=""%s"">hier</a>, um den Wizard zu starten."
