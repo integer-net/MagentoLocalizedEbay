@@ -34,11 +34,6 @@ class IntegerNet_MagentoLocalizedEbay_Block_Form extends Mage_Adminhtml_Block_Wi
         return Mage::helper('adminhtml')->getUrl('adminhtml/magentolocalizedebay/paypalPopup');
     }
 
-    public function getPayPalConfigUrl()
-    {
-        return Mage::helper('adminhtml')->getUrl('adminhtml/magentolocalizedebay/paypal');
-    }
-
     public function getPayPalApiUrl()
     {
         return 'https://www.paypal.com/cgi-bin/customerprofileweb?cmd=_profile-api-access';
