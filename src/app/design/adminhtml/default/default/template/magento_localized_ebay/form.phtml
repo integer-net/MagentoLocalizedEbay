@@ -183,7 +183,7 @@
         <table cellspacing="0" class="form-list">
             <tbody>
 
-            <?php if (!Mage::getStoreConfig('magento_localized/installed_modules/billsafe/billsafe')): ?>
+            <?php if (!Mage::getStoreConfig('magento_localized/installed_modules/connect20/billsafe_3')): ?>
                 <tr>
                     <td class="label"><label for="field_billsafe_install"><?php echo $this->__('Install BillSAFE module') ?></label></td>
                     <td class="value">
@@ -212,7 +212,7 @@
                         <option value="1" <?php if (Mage::getStoreConfigFlag('payment/billsafe/active')): ?>selected="selected"<?php endif ?>><?php echo $this->__('Yes') ?></option>
                     </select>
                 </td>
-                <?php if (Mage::getStoreConfig('magento_localized/installed_modules/billsafe/billsafe')): ?>
+                <?php if (Mage::getStoreConfig('magento_localized/installed_modules/connect20/billsafe_3')): ?>
                     <td class="comment" rowspan="3">
                         <a href="<?php echo $this->getBillsafeRegisterUrl() ?>" target="_blank" id="billsafe_direct_info">
                             <img src="<?php echo $this->getSkinUrl('images/i_question-mark.png') ?>" alt="" />

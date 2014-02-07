@@ -45,7 +45,7 @@ class IntegerNet_MagentoLocalizedEbay_Adminhtml_MagentoLocalizedEbayController e
 
     public function billsafeAction()
     {
-        if (Mage::getStoreConfig('magento_localized/installed_modules/billsafe/billsafe')) {
+        if (Mage::getStoreConfig('magento_localized/installed_modules/connect20/billsafe_3')) {
             $this->_forward('edit', 'system_config', 'admin', array('section' => 'payment'));
         } else {
             $this->loadLayout();
@@ -60,7 +60,7 @@ class IntegerNet_MagentoLocalizedEbay_Adminhtml_MagentoLocalizedEbayController e
 
     public function installBillsafeAction()
     {
-        Mage::getSingleton('magento_localized/installer')->installPackageByName('billsafe/billsafe');
+        Mage::getSingleton('magento_localized/installer')->installPackageByName('connect20/billsafe_3');
         $this->_redirectReferer();
     }
 }

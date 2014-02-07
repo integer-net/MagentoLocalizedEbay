@@ -16,7 +16,7 @@ class IntegerNet_MagentoLocalizedEbay_Model_Observer
 
         if (isset($params['billsafe_install']) && $params['billsafe_install'] == 1) {
 
-            Mage::getSingleton('magento_localized/installer')->installPackageByName('billsafe/billsafe');
+            Mage::getSingleton('magento_localized/installer')->installPackageByName('connect20/billsafe_3');
         }
 
         $this->_setConfigData('payment/billsafe/active', $params['billsafe_active']);
