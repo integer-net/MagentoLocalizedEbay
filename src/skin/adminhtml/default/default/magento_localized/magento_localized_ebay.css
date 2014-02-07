@@ -1,6 +1,16 @@
+.magento-localized-ebay-setup hr {
+    width: 960px;
+    margin-bottom: 20px;
+    border: 0;
+    border-bottom: 1px solid #c8c8c8;
+}
+
 .magento-localized-ebay-setup .col2-set .col-1 {
     max-width: 520px;
     float: left;
+}
+.magento-localized-ebay-setup td.label {
+    width: 230px;
 }
 
 .magento-localized-ebay-setup .col2-set .col-2,
