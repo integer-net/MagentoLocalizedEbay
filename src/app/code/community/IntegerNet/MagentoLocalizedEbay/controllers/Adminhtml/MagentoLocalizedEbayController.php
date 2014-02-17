@@ -25,7 +25,7 @@ class IntegerNet_MagentoLocalizedEbay_Adminhtml_MagentoLocalizedEbayController e
     public function m2eAction()
     {
         if (Mage::getStoreConfig('magento_localized/installed_modules/ess/m2e-pro')) {
-            $this->_forward('installation', 'adminhtml_wizard_installationebay', 'M2ePro');
+            $this->_forward('installation', 'adminhtml_wizard_installationEbay', 'M2ePro');
         } else {
             $this->loadLayout();
             $this->getLayout()->getBlock('content')->append(
