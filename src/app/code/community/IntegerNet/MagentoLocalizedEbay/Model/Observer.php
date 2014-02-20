@@ -13,7 +13,7 @@ class IntegerNet_MagentoLocalizedEbay_Model_Observer
     public function magentoLocalizedFormSave($observer)
     {
         $params = $observer->getParams();
-
+/*
         if (isset($params['billsafe_install']) && $params['billsafe_install'] == 1) {
 
             Mage::getSingleton('magento_localized/installer')->installPackageByName('connect20/billsafe_3');
@@ -25,6 +25,7 @@ class IntegerNet_MagentoLocalizedEbay_Model_Observer
         $this->_setConfigData('payment/billsafe/merchant_license', $params['billsafe_merchant_license']);
         $this->_setConfigData('payment/billsafe_installment/active', $params['billsafe_installment_active']);
         $this->_setConfigData('payment/billsafe_installment/sandbox', $params['billsafe_installment_sandbox']);
+*/
 
         if ($params['paypal_active'] && !Mage::getStoreConfigFlag('payment/paypal_express/active')) {
             Mage::getSingleton('adminhtml/session')->addSuccess(Mage::helper('magento_localized_ebay')->__(

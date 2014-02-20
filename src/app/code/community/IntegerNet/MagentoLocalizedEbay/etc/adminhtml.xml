@@ -21,11 +21,11 @@
                             <sort_order>210</sort_order>
                             <action>adminhtml/magentoLocalizedEbay/paypal</action>
                         </paypal>
-                        <billsafe translate="title" module="magento_localized_ebay">
+                        <!--<billsafe translate="title" module="magento_localized_ebay">
                             <title>Configure BillSAFE</title>
                             <sort_order>220</sort_order>
                             <action>adminhtml/magentoLocalizedEbay/billsafe</action>
-                        </billsafe>
+                        </billsafe>-->
                         <m2e translate="title" module="magento_localized_ebay">
                             <title>Configure M2E Pro</title>
                             <sort_order>230</sort_order>
@@ -201,11 +201,11 @@
                     <sort_order>210</sort_order>
                     <action>adminhtml/magentoLocalizedEbay/paypal</action>
                 </paypal>
-                <billsafe translate="title" module="magento_localized_ebay">
+                <!--<billsafe translate="title" module="magento_localized_ebay">
                     <title>Configure BillSAFE</title>
                     <sort_order>220</sort_order>
                     <action>adminhtml/magentoLocalizedEbay/billsafe</action>
-                </billsafe>
+                </billsafe>-->
                 <m2e translate="title" module="magento_localized_ebay">
                     <title>Configure M2E Pro</title>
                     <sort_order>230</sort_order>
