@@ -4,7 +4,7 @@
  *
  * @category   IntegerNet
  * @package    IntegerNet_MagentoLocalizedEbay
- * @copyright  Copyright (c) 2013 integer_net GmbH (http://www.integer-net.de/)
+ * @copyright  Copyright (c) 2014 integer_net GmbH (http://www.integer-net.de/)
  * @author     Andreas von Studnitz <avs@integer-net.de>
  */
 class IntegerNet_MagentoLocalizedEbay_Block_Adminhtml_Page_Head extends Mage_Adminhtml_Block_Page_Head

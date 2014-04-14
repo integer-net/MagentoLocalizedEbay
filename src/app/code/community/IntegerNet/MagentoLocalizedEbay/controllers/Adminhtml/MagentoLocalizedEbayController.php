@@ -4,7 +4,7 @@
  *
  * @category   IntegerNet
  * @package    IntegerNet_MagentoLocalized
- * @copyright  Copyright (c) 2013 integer_net GmbH (http://www.integer-net.de/)
+ * @copyright  Copyright (c) 2014 integer_net GmbH (http://www.integer-net.de/)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @author     Andreas von Studnitz <avs@integer-net.de>
  */
@@ -45,7 +45,7 @@ class IntegerNet_MagentoLocalizedEbay_Adminhtml_MagentoLocalizedEbayController e
 
     public function billsafeAction()
     {
-        if (Mage::getStoreConfig('magento_localized/installed_modules/connect20/billsafe_3')) {
+        if (Mage::getStoreConfig('magento_localized/installed_modules/billsafe/billsafe')) {
             $this->_forward('edit', 'system_config', 'admin', array('section' => 'payment'));
         } else {
             $this->loadLayout();
@@ -60,7 +60,7 @@ class IntegerNet_MagentoLocalizedEbay_Adminhtml_MagentoLocalizedEbayController e
 
     public function installBillsafeAction()
     {
-        Mage::getSingleton('magento_localized/installer')->installPackageByName('connect20/billsafe_3');
+        Mage::getSingleton('magento_localized/installer')->installPackageByName('billsafe/billsafe');
         $this->_redirectReferer();
     }
 }
