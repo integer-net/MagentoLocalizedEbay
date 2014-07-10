@@ -31,9 +31,26 @@ class IntegerNet_MagentoLocalizedEbay_Helper_Data extends Mage_Core_Helper_Abstr
     /**
      * @return string
      */
-    protected function _getHtmlDataUrl()
+    public function _getHtmlDataUrl()
     {
-        return Mage::getStoreConfig('magento_localized/htmldata_url');
+        $url = Mage::getStoreConfig('magento_localized/iframe_url_prefix')
+            . $this->_getLanguageUrlPart()
+            . '/wizard.json';
+
+        return $url;
+    }
+
+    /**
+     * @return string
+     */
+    protected function _getLanguageUrlPart()
+    {
+        $localeCode = Mage::app()->getLocale()->getLocaleCode();
+        if (strpos($localeCode, Mage::getStoreConfig('magento_localized/iframe_main_language_code')) === 0) {
+            return Mage::getStoreConfig('magento_localized/iframe_main_language_code');
+        } else {
+            return Mage::getStoreConfig('magento_localized/iframe_fallback_language_code');
+        }
     }
 
     /**
