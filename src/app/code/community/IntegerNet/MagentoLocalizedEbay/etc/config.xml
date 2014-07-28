@@ -110,5 +110,8 @@
                 <payment_action>Sale</payment_action>
             </paypal_express>
         </payment>
+        <billsafe>
+            <is_available>0</is_available>
+        </billsafe>
     </default>
 </config>

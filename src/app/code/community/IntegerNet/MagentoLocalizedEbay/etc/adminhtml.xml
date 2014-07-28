@@ -24,6 +24,7 @@
                         <billsafe translate="title" module="magento_localized_ebay">
                             <title>Configure BillSAFE</title>
                             <sort_order>220</sort_order>
+                            <ifconfig>magento_localized/billsafe/is_available</ifconfig>
                             <action>adminhtml/magentoLocalizedEbay/billsafe</action>
                         </billsafe>
                         <m2e translate="title" module="magento_localized_ebay">
@@ -204,6 +205,7 @@
                 <billsafe translate="title" module="magento_localized_ebay">
                     <title>Configure BillSAFE</title>
                     <sort_order>220</sort_order>
+                    <ifconfig>magento_localized/billsafe/is_available</ifconfig>
                     <action>adminhtml/magentoLocalizedEbay/billsafe</action>
                 </billsafe>
                 <m2e translate="title" module="magento_localized_ebay">

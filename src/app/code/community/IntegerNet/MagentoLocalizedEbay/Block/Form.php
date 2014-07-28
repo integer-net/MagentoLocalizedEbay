@@ -73,4 +73,9 @@ class IntegerNet_MagentoLocalizedEbay_Block_Form extends Mage_Adminhtml_Block_Wi
     {
         return 'http://m2epro.com/';
     }
+    
+    public function isBillsafeAvailable()
+    {
+        return Mage::getStoreConfigFlag('magento_localized/billsafe/is_available');
+    }
 }
