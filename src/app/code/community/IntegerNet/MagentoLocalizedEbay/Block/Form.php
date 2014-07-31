@@ -24,6 +24,18 @@ class IntegerNet_MagentoLocalizedEbay_Block_Form extends Mage_Adminhtml_Block_Wi
         }
         return '';
     }
+    
+    public function getSections()
+    {
+        return array('ebay', 'other');
+    }
+    
+    public function getModules($sectionName)
+    {
+        $htmlData = Mage::helper('magento_localized_ebay')->getHtmlData();
+        
+        return array_keys($htmlData[$sectionName]);
+    }
 
     /**
      * @param string $moduleName i.e. 'paypal'
