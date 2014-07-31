@@ -13,15 +13,27 @@ class IntegerNet_MagentoLocalizedEbay_Block_Form extends Mage_Adminhtml_Block_Wi
     /**
      * @param string $moduleName i.e. 'paypal'
      * @param string $areaName i.e. 'short_description'
+     * @param string $sectionName i.e. 'ebay'
      * @return string
      */
-    public function getAreaHtml($moduleName, $areaName)
+    public function getAreaHtml($moduleName, $areaName, $sectionName = 'ebay')
     {
         $htmlData = Mage::helper('magento_localized_ebay')->getHtmlData();
-        if (isset($htmlData['ebay'][$moduleName][$areaName])) {
-            return $htmlData['ebay'][$moduleName][$areaName];
+        if (isset($htmlData[$sectionName][$moduleName][$areaName])) {
+            return $htmlData[$sectionName][$moduleName][$areaName];
         }
         return '';
+    }
+
+    /**
+     * @param string $moduleName i.e. 'paypal'
+     * @param string $sectionName i.e. 'ebay'
+     * @return string
+     */
+    public function hasModuleHtml($moduleName, $sectionName = 'ebay')
+    {
+        $htmlData = Mage::helper('magento_localized_ebay')->getHtmlData();
+        return isset($htmlData[$sectionName][$moduleName]);
     }
 
     public function getPayPalDirectUrl()
@@ -73,9 +85,13 @@ class IntegerNet_MagentoLocalizedEbay_Block_Form extends Mage_Adminhtml_Block_Wi
     {
         return 'http://m2epro.com/';
     }
-    
-    public function isBillsafeAvailable()
+
+    public function isModuleAvailable($moduleName, $sectionName = 'ebay')
     {
-        return Mage::getStoreConfigFlag('magento_localized/billsafe/is_available');
+        if ($moduleName == 'billsafe' && !Mage::getStoreConfigFlag('magento_localized/billsafe/is_available')) {
+            return false;
+        }
+        
+        return $this->hasModuleHtml($moduleName, $sectionName);
     }
 }
