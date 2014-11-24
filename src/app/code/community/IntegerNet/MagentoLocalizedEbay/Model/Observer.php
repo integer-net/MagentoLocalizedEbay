@@ -17,14 +17,14 @@ class IntegerNet_MagentoLocalizedEbay_Model_Observer
         if (isset($params['billsafe_install']) && $params['billsafe_install'] == 1) {
 
             Mage::getSingleton('magento_localized/installer')->installPackageByName('billsafe/billsafe');
-        }
 
-        $this->_setConfigData('payment/billsafe/active', $params['billsafe_active']);
-        $this->_setConfigData('payment/billsafe/sandbox', $params['billsafe_sandbox']);
-        $this->_setConfigData('payment/billsafe/merchant_id', $params['billsafe_merchant_id']);
-        $this->_setConfigData('payment/billsafe/merchant_license', $params['billsafe_merchant_license']);
-        $this->_setConfigData('payment/billsafe_installment/active', $params['billsafe_installment_active']);
-        $this->_setConfigData('payment/billsafe_installment/sandbox', $params['billsafe_installment_sandbox']);
+            $this->_setConfigData('payment/billsafe/active', $params['billsafe_active']);
+            $this->_setConfigData('payment/billsafe/sandbox', $params['billsafe_sandbox']);
+            $this->_setConfigData('payment/billsafe/merchant_id', $params['billsafe_merchant_id']);
+            $this->_setConfigData('payment/billsafe/merchant_license', $params['billsafe_merchant_license']);
+            $this->_setConfigData('payment/billsafe_installment/active', $params['billsafe_installment_active']);
+            $this->_setConfigData('payment/billsafe_installment/sandbox', $params['billsafe_installment_sandbox']);
+        }
 
         if ($params['paypal_active'] && !Mage::getStoreConfigFlag('payment/paypal_express/active')) {
             Mage::getSingleton('adminhtml/session')->addSuccess(Mage::helper('magento_localized_ebay')->__(
