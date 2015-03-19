@@ -59,6 +59,9 @@ class IntegerNet_MagentoLocalizedEbay_Helper_Data extends Mage_Core_Helper_Abstr
     protected function _getHtmlDataFromWeb()
     {
         $url = $this->_getHtmlDataUrl();
+        if (substr($url, 0, 2) == '//') {
+            $url = 'http:' . $url;
+        }
 
         try {
             $request = new Zend_Http_Client($url);
