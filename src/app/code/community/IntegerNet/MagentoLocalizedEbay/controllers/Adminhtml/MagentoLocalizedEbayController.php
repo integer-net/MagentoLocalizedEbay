@@ -42,25 +42,4 @@ class IntegerNet_MagentoLocalizedEbay_Adminhtml_MagentoLocalizedEbayController e
         Mage::getSingleton('magento_localized/installer')->installPackageByName('ess/m2e-pro');
         $this->_redirectReferer();
     }
-
-    public function billsafeAction()
-    {
-        if (Mage::getStoreConfig('magento_localized/installed_modules/billsafe/billsafe')) {
-            $this->_forward('edit', 'system_config', 'admin', array('section' => 'payment'));
-        } else {
-            $this->loadLayout();
-            $this->getLayout()->getBlock('content')->append(
-                $this->getLayout()
-                    ->createBlock('magento_localized_ebay/form', 'magento_localized_ebay.billsafe')
-                    ->setTemplate('magento_localized_ebay/billsafe.phtml')
-            );
-            $this->renderLayout();
-        }
-    }
-
-    public function installBillsafeAction()
-    {
-        Mage::getSingleton('magento_localized/installer')->installPackageByName('billsafe/billsafe');
-        $this->_redirectReferer();
-    }
 }

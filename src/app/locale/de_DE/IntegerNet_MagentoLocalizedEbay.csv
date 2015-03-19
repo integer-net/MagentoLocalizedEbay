@@ -1,20 +1,7 @@
-"Install BillSAFE module","BillSAFE-Modul installieren"
-"Activate BillSAFE payment","BillSAFE-Zahlungen aktivieren"
-"Test mode (sandbox) for BillSAFE payment","Testmodus (Sandbox) für BillSAFE-Zahlungen"
-"Merchant ID","Verkäufer-ID"
-"License Key","Lizenzschlüssel"
-"You can find this by logging in to the <a href=""%s"" target=""_blank"">BillSAFE payment backend</a>.","Sie finden diese Daten im <a href=""%s"" target=""_blank"">BillSAFE Payment Backend</a>."
-"Activate BillSAFE installment payment","BillSAFE-Ratenkauf aktivieren"
-"Test mode (sandbox) for BillSAFE installment payment","Testmodus (Sandbox) für BillSAFE-Ratenkauf"
-"BillSAFE is the secure invoice payment service from PayPal.","BillSAFE ist der sichere Rechnungskauf -Service von PayPal."
-"BillSAFE is the secure invoice payment service from PayPal. Klick here to get more info or register now.","BillSAFE ist der sichere Rechnungskauf -Service von PayPal. Klicken Sie hier für mehr Informationen oder um sich zu registrieren."
-"Register here now!","Jetzt hier anmelden!"
-"What is BillSAFE?","Was ist BillSAFE?"
-
 "Activate PayPal Express payment","&quot;Direkt zu PayPal&quot; aktivieren?"
 "Test mode (sandbox) for PayPal payment","Testmodus (Sandbox) für PayPal-Zahlungen"
 "IntegerNet_MagentoLocalizedEbay::Email Associated with PayPal Merchant Account","Email-Adresse des PayPal Händler-Kontos"
-"Setup of PayPal, BillSAFE and M2E","Einrichtung von PayPal, BillSAFE und M2E"
+"Setup of PayPal and M2E","Einrichtung von PayPal und M2E"
 "Setup of modules powered by ebay","Einrichtung Module powered by ebay"
 "IntegerNet_MagentoLocalizedEbay::What is PayPal? Click for more info or to register.","Was ist PayPal? Klicken Sie hier für mehr Informationen oder zum Anmelden."
 "Please enter the e-mail address of your PayPal merchant account.","Bitte tragen Sie hier die E-Mail-Adresse Ihres PayPal Händlerkontos ein."
@@ -27,10 +14,6 @@
 "What is M2E Pro?","Was ist M2E Pro?"
 
 "Configure PayPal Express","PayPal Express konfigurieren"
-
-"Configure BillSAFE","BillSAFE konfigurieren"
-"Install BillSAFE","BillSAFE installieren"
-"The BillSAFE module is not installed yet.","Das BillSAFE-Modul ist noch nicht installiert."
 
 "Configure M2E Pro","M2E Pro konfigurieren"
 "Install M2E Pro","M2E Pro installieren"

@@ -68,11 +68,6 @@ class IntegerNet_MagentoLocalizedEbay_Block_Form extends Mage_Adminhtml_Block_Wi
         return 'https://www.paypal.com/de/webapps/mpp/home-merchant';
     }
 
-    public function getBillsafeRegisterUrl()
-    {
-        return 'http://www.billsafe.de/offer?utm_source=part&utm_medium=magento&utm_campaign=magentoDEEdition';
-    }
-
     public function getEbayRegisterUrl()
     {
         return 'http://pages.ebay.de/help/account/how-to-register.html';
@@ -100,10 +95,6 @@ class IntegerNet_MagentoLocalizedEbay_Block_Form extends Mage_Adminhtml_Block_Wi
 
     public function isModuleAvailable($moduleName, $sectionName = 'ebay')
     {
-        if ($moduleName == 'billsafe' && !Mage::getStoreConfigFlag('magento_localized/billsafe/is_available')) {
-            return false;
-        }
-        
         return $this->hasModuleHtml($moduleName, $sectionName);
     }
 }
