@@ -95,6 +95,9 @@ class IntegerNet_MagentoLocalizedEbay_Block_Form extends Mage_Adminhtml_Block_Wi
 
     public function isModuleAvailable($moduleName, $sectionName = 'ebay')
     {
+        if ($moduleName == 'billsafe') {
+            return false;
+        }
         return $this->hasModuleHtml($moduleName, $sectionName);
     }
 }
