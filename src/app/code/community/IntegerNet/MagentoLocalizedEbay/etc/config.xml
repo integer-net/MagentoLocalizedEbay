@@ -38,9 +38,6 @@
                 <class>IntegerNet_MagentoLocalizedEbay_Helper</class>
             </magento_localized_ebay>
         </helpers>
-    </global>
-
-    <adminhtml>
         <events>
             <magento_localized_form_save>
                 <observers>
@@ -52,6 +49,9 @@
                 </observers>
             </magento_localized_form_save>
         </events>
+    </global>
+
+    <adminhtml>
         <layout>
             <updates>
                 <magento_localized_ebay>

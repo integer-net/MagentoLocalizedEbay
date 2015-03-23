@@ -14,7 +14,7 @@ class IntegerNet_MagentoLocalizedEbay_Model_Observer
     {
         $params = $observer->getParams();
 
-        if ($params['paypal_active'] && !Mage::getStoreConfigFlag('payment/paypal_express/active')) {
+        if (!isset($params['auto_install']) && $params['paypal_active'] && !Mage::getStoreConfigFlag('payment/paypal_express/active')) {
             Mage::getSingleton('adminhtml/session')->addSuccess(Mage::helper('magento_localized_ebay')->__(
                 'You have successfully activated PayPal payment. Anytime you have the possibility to select advanced settings <a href="%s">here</a>.',
                 Mage::helper('adminhtml')->getUrl('adminhtml/magentolocalizedebay/paypal')
