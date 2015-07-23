@@ -42,4 +42,9 @@ class IntegerNet_MagentoLocalizedEbay_Adminhtml_MagentoLocalizedEbayController e
         Mage::getSingleton('magento_localized/installer')->installPackageByName('ess/m2e-pro');
         $this->_redirectReferer();
     }
+
+    protected function _isAllowed()
+    {
+        return Mage::getSingleton('admin/session')->isAllowed('system/magento_localized') ||  Mage::getSingleton('admin/session')->isAllowed('magento_localized');
+    }
 }

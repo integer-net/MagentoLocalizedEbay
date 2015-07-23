@@ -363,4 +363,313 @@
             </children>
         </magento_localized>
     </menu>
+
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <magento_localized>
+                                <children>
+                                    <paypal translate="title" module="magento_localized_ebay">
+                                        <title>Configure PayPal Express</title>
+                                        <sort_order>210</sort_order>
+                                    </paypal>
+                                    <m2e translate="title" module="magento_localized_ebay">
+                                        <title>Configure M2E Pro</title>
+                                        <sort_order>230</sort_order>
+                                    </m2e>
+                                    <m2epro_ebay>
+                                        <title>Sell On eBay</title>
+                                        <sort_order>240</sort_order>
+                                        <children>
+                                            <listings>
+                                                <title>Listings</title>
+                                                <sort_order>1</sort_order>
+                                            </listings>
+
+                                            <orders>
+                                                <title>Sales</title>
+                                                <sort_order>2</sort_order>
+                                            </orders>
+
+                                            <logs>
+                                                <title>Logs</title>
+                                                <sort_order>3</sort_order>
+                                            </logs>
+
+                                            <configuration>
+                                                <title>Configuration</title>
+                                                <sort_order>4</sort_order>
+                                            </configuration>
+
+                                            <help>
+                                                <title>Help</title>
+                                                <sort_order>5</sort_order>
+                                            </help>
+                                        </children>
+                                    </m2epro_ebay>
+
+                                    <m2epro_common>
+                                        <title>Sell On Multi-Channels</title>
+                                        <sort_order>250</sort_order>
+                                        <children>
+                                            <listings>
+                                                <title>Manage Listings</title>
+                                                <sort_order>1</sort_order>
+                                                <children>
+                                                    <listing>
+                                                        <title>Listings</title>
+                                                        <sort_order>1</sort_order>
+                                                    </listing>
+                                                    <listing_other>
+                                                        <title>3rd Party Listings</title>
+                                                        <sort_order>2</sort_order>
+                                                    </listing_other>
+                                                </children>
+                                            </listings>
+
+                                            <orders>
+                                                <title>Sales</title>
+                                                <sort_order>2</sort_order>
+                                            </orders>
+
+                                            <templates>
+                                                <title>Templates</title>
+                                                <sort_order>3</sort_order>
+                                                <children>
+                                                    <selling_format>
+                                                        <title>Selling Format Templates</title>
+                                                        <sort_order>1</sort_order>
+                                                    </selling_format>
+                                                    <synchronization>
+                                                        <title>Synchronization Templates</title>
+                                                        <sort_order>2</sort_order>
+                                                    </synchronization>
+                                                </children>
+                                            </templates>
+
+                                            <logs>
+                                                <title>Activity Logs</title>
+                                                <sort_order>4</sort_order>
+                                                <children>
+                                                    <listing>
+                                                        <title>Listings Log</title>
+                                                        <sort_order>1</sort_order>
+                                                    </listing>
+                                                    <listing_other>
+                                                        <title>3rd Party Listings Log</title>
+                                                        <sort_order>2</sort_order>
+                                                    </listing_other>
+                                                    <synchronization>
+                                                        <title>Synchronization Log</title>
+                                                        <sort_order>3</sort_order>
+                                                    </synchronization>
+                                                    <order>
+                                                        <title>Orders Log</title>
+                                                        <sort_order>4</sort_order>
+                                                    </order>
+                                                </children>
+                                            </logs>
+
+                                            <configuration>
+                                                <title>Configuration</title>
+                                                <sort_order>5</sort_order>
+                                                <children>
+                                                    <account>
+                                                        <title>Account Settings</title>
+                                                        <sort_order>1</sort_order>
+                                                    </account>
+                                                    <marketplace>
+                                                        <title>Marketplaces</title>
+                                                        <sort_order>2</sort_order>
+                                                    </marketplace>
+                                                    <synchronization>
+                                                        <title>Synchronization</title>
+                                                        <sort_order>3</sort_order>
+                                                    </synchronization>
+                                                    <global>
+                                                        <title>Global Settings</title>
+                                                        <sort_order>4</sort_order>
+                                                    </global>
+                                                </children>
+                                            </configuration>
+
+                                            <help>
+                                                <title>Help</title>
+                                                <sort_order>6</sort_order>
+                                                <children>
+                                                    <doc>
+                                                        <title>Documentation</title>
+                                                        <sort_order>1</sort_order>
+                                                    </doc>
+                                                    <tutorial>
+                                                        <title>Video Tutorials</title>
+                                                        <sort_order>2</sort_order>
+                                                    </tutorial>
+                                                    <support>
+                                                        <title>Support</title>
+                                                        <sort_order>3</sort_order>
+                                                    </support>
+                                                </children>
+                                            </help>
+                                        </children>
+                                    </m2epro_common>
+                                </children>
+                            </magento_localized>
+                        </children>
+                    </system>
+                    <magento_localized>
+                        <children>
+                            <paypal translate="title" module="magento_localized_ebay">
+                                <title>Configure PayPal Express</title>
+                                <sort_order>210</sort_order>
+                            </paypal>
+                            <m2e translate="title" module="magento_localized_ebay">
+                                <title>Configure M2E Pro</title>
+                                <sort_order>230</sort_order>
+                            </m2e>
+                            <m2epro_ebay>
+                                <title>Sell On eBay</title>
+                                <sort_order>240</sort_order>
+                                <children>
+                                    <listings>
+                                        <title>Listings</title>
+                                        <sort_order>1</sort_order>
+                                    </listings>
+
+                                    <orders>
+                                        <title>Sales</title>
+                                        <sort_order>2</sort_order>
+                                    </orders>
+
+                                    <logs>
+                                        <title>Logs</title>
+                                        <sort_order>3</sort_order>
+                                    </logs>
+
+                                    <configuration>
+                                        <title>Configuration</title>
+                                        <sort_order>4</sort_order>
+                                    </configuration>
+
+                                    <help>
+                                        <title>Help</title>
+                                        <sort_order>5</sort_order>
+                                    </help>
+                                </children>
+                            </m2epro_ebay>
+
+                            <m2epro_common>
+                                <title>Sell On Multi-Channels</title>
+                                <sort_order>250</sort_order>
+                                <children>
+                                    <listings>
+                                        <title>Manage Listings</title>
+                                        <sort_order>1</sort_order>
+                                        <children>
+                                            <listing>
+                                                <title>Listings</title>
+                                                <sort_order>1</sort_order>
+                                            </listing>
+                                            <listing_other>
+                                                <title>3rd Party Listings</title>
+                                                <sort_order>2</sort_order>
+                                            </listing_other>
+                                        </children>
+                                    </listings>
+
+                                    <orders>
+                                        <title>Sales</title>
+                                        <sort_order>2</sort_order>
+                                    </orders>
+
+                                    <templates>
+                                        <title>Templates</title>
+                                        <sort_order>3</sort_order>
+                                        <children>
+                                            <selling_format>
+                                                <title>Selling Format Templates</title>
+                                                <sort_order>1</sort_order>
+                                            </selling_format>
+                                            <synchronization>
+                                                <title>Synchronization Templates</title>
+                                                <sort_order>2</sort_order>
+                                            </synchronization>
+                                        </children>
+                                    </templates>
+
+                                    <logs>
+                                        <title>Activity Logs</title>
+                                        <sort_order>4</sort_order>
+                                        <children>
+                                            <listing>
+                                                <title>Listings Log</title>
+                                                <sort_order>1</sort_order>
+                                            </listing>
+                                            <listing_other>
+                                                <title>3rd Party Listings Log</title>
+                                                <sort_order>2</sort_order>
+                                            </listing_other>
+                                            <synchronization>
+                                                <title>Synchronization Log</title>
+                                                <sort_order>3</sort_order>
+                                            </synchronization>
+                                            <order>
+                                                <title>Orders Log</title>
+                                                <sort_order>4</sort_order>
+                                            </order>
+                                        </children>
+                                    </logs>
+
+                                    <configuration>
+                                        <title>Configuration</title>
+                                        <sort_order>5</sort_order>
+                                        <children>
+                                            <account>
+                                                <title>Account Settings</title>
+                                                <sort_order>1</sort_order>
+                                            </account>
+                                            <marketplace>
+                                                <title>Marketplaces</title>
+                                                <sort_order>2</sort_order>
+                                            </marketplace>
+                                            <synchronization>
+                                                <title>Synchronization</title>
+                                                <sort_order>3</sort_order>
+                                            </synchronization>
+                                            <global>
+                                                <title>Global Settings</title>
+                                                <sort_order>4</sort_order>
+                                            </global>
+                                        </children>
+                                    </configuration>
+
+                                    <help>
+                                        <title>Help</title>
+                                        <sort_order>6</sort_order>
+                                        <children>
+                                            <doc>
+                                                <title>Documentation</title>
+                                                <sort_order>1</sort_order>
+                                            </doc>
+                                            <tutorial>
+                                                <title>Video Tutorials</title>
+                                                <sort_order>2</sort_order>
+                                            </tutorial>
+                                            <support>
+                                                <title>Support</title>
+                                                <sort_order>3</sort_order>
+                                            </support>
+                                        </children>
+                                    </help>
+                                </children>
+                            </m2epro_common>
+                        </children>
+                    </magento_localized>
+                </children>
+            </admin>
+        </resources>
+    </acl>
 </config>
