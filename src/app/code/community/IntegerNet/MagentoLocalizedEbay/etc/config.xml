@@ -102,6 +102,9 @@
                 <visible_on_product>0</visible_on_product>
                 <payment_action>Sale</payment_action>
             </paypal_express>
+            <iways_paypalplus_payment>
+                <active>1</active>
+            </iways_paypalplus_payment>
         </payment>
     </default>
 </config>

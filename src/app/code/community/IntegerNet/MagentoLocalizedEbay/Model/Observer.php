@@ -21,12 +21,22 @@ class IntegerNet_MagentoLocalizedEbay_Model_Observer
             ));
         }
 
-        $this->_setConfigData('payment/paypal_express/active', $params['paypal_active']);
-        $this->_setConfigData('paypal/wpp/sandbox_flag', $params['paypal_sandbox']);
-        $this->_setConfigData('paypal/general/business_account', $params['paypal_express_email']);
-        $this->_setConfigData('paypal/wpp/api_username', $this->_encrypt($params['paypal_api_username']));
-        $this->_setConfigData('paypal/wpp/api_password', $this->_encrypt($params['paypal_api_password']));
-        $this->_setConfigData('paypal/wpp/api_signature', $this->_encrypt($params['paypal_api_signature']));
+        if (isset($params['paypalplus_active']) && $params['paypalplus_active'] == 1) {
+            Mage::getSingleton('magento_localized/installer')->installPackageByName('iways/paypalplus');
+            $this->_setConfigData('iways_paypalplus/api/client_id', $params['paypalplus_api_client_id']);
+            $this->_setConfigData('iways_paypalplus/api/client_secret', $params['paypalplus_api_client_secret']);
+            $this->_setConfigData('iways_paypalplus/api/mode', ( $params['paypalplus_api_mode'] ? 'sandbox' : 'live'));
+            $this->_setConfigData('iways_paypalplus/api/hdrimg', $params['paypalplus_api_hdrimg']);
+            $this->_setConfigData('payment/iways_paypalplus_payment/active', 1);
+        } else {
+            $this->_setConfigData('payment/paypal_express/active', $params['paypal_active']);
+            $this->_setConfigData('paypal/wpp/sandbox_flag', $params['paypal_sandbox']);
+            $this->_setConfigData('paypal/general/business_account', $params['paypal_express_email']);
+            $this->_setConfigData('paypal/wpp/api_username', $this->_encrypt($params['paypal_api_username']));
+            $this->_setConfigData('paypal/wpp/api_password', $this->_encrypt($params['paypal_api_password']));
+            $this->_setConfigData('paypal/wpp/api_signature', $this->_encrypt($params['paypal_api_signature']));
+            $this->_setConfigData('payment/iways_paypalplus_payment/active', 0);
+        }
     }
 
     /**

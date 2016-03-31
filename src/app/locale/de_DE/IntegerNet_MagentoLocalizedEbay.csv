@@ -17,3 +17,8 @@
 
 "IntegerNet_MagentoLocalizedEbay::No","Nein"
 "IntegerNet_MagentoLocalizedEbay::Yes","Ja"
+
+"Activate PayPal PLUS?","PayPal PLUS aktivieren?"
+"Client ID","Klienten-ID"
+"Client Secret","Klienten-Schlüssel"
+"Header Image URL","URL Ihres Logos für die PayPal PLUS Seite"

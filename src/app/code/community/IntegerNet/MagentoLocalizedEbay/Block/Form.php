@@ -76,6 +76,9 @@ class IntegerNet_MagentoLocalizedEbay_Block_Form extends Mage_Adminhtml_Block_Wi
         if ($moduleName == 'm2e') {
             return false;
         }
+        if ($moduleName == 'paypalplus') {
+            return (Mage::getStoreConfig('magento_localized/module_code') == 'magento_de');
+        }
         return $this->hasModuleHtml($moduleName, $sectionName);
     }
 }
