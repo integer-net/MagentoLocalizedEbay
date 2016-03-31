@@ -68,34 +68,12 @@ class IntegerNet_MagentoLocalizedEbay_Block_Form extends Mage_Adminhtml_Block_Wi
         return 'https://www.paypal.com/de/webapps/mpp/home-merchant';
     }
 
-    public function getEbayRegisterUrl()
-    {
-        return 'http://pages.ebay.de/help/account/how-to-register.html';
-    }
-
-    public function getEbayMerchantUrl()
-    {
-        return 'https://scgi.ebay.de/ws/eBayISAPI.dll?RegisterEnterInfo&bizflow=2';
-    }
-
-    public function getEbayMerchantDocumentationUrl()
-    {
-        return 'http://pages.ebay.de/gewerblich-verkaufen/';
-    }
-
-    public function getEbayStartUrl()
-    {
-        return 'http://success.ebay.de/ebay-start/?id=m2e';
-    }
-
-    public function getM2EUrl()
-    {
-        return 'http://m2epro.com/';
-    }
-
     public function isModuleAvailable($moduleName, $sectionName = 'ebay')
     {
         if ($moduleName == 'billsafe') {
+            return false;
+        }
+        if ($moduleName == 'm2e') {
             return false;
         }
         return $this->hasModuleHtml($moduleName, $sectionName);

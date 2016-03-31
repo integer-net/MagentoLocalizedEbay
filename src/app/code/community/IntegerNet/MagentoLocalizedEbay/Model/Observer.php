@@ -27,17 +27,6 @@ class IntegerNet_MagentoLocalizedEbay_Model_Observer
         $this->_setConfigData('paypal/wpp/api_username', $this->_encrypt($params['paypal_api_username']));
         $this->_setConfigData('paypal/wpp/api_password', $this->_encrypt($params['paypal_api_password']));
         $this->_setConfigData('paypal/wpp/api_signature', $this->_encrypt($params['paypal_api_signature']));
-
-        if (isset($params['m2e_install']) && $params['m2e_install'] == 1) {
-
-            Mage::getSingleton('magento_localized/installer')->installPackageByName('ess/m2e-pro');
-            /*
-            Mage::getSingleton('adminhtml/session')->addNotice(Mage::helper('magento_localized_ebay')->__(
-                'M2E Pro is installed, but not configured yet. Click <a href="%s">here</a> to start the wizard.',
-                Mage::helper('adminhtml')->getUrl('M2ePro/adminhtml_wizard_main/')
-            ));
-            */
-        }
     }
 
     /**

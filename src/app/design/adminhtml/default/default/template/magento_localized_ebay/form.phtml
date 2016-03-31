@@ -22,7 +22,7 @@
             <?php echo Mage::helper('magento_localized')->__('%s Setup', $moduleTitle) ?><br />
         </h3>
     </div>
-    <h3><?php echo Mage::helper('magento_localized')->__('Page %s of %s', 3, 3) ?>: <?php echo $this->__('Setup of modules powered by ebay') ?></h3>
+    <h3><?php echo Mage::helper('magento_localized')->__('Page %s of %s', 3, 3) ?>: <?php echo $this->__('Setup of modules powered by PayPal') ?></h3>
 
 <?php foreach($this->getSections() as $sectionName): ?>
     <?php foreach($this->getModules($sectionName) as $moduleName): ?>
@@ -142,36 +142,6 @@
 
                     </tbody>
                 </table>
-
-            <?php elseif ($moduleName == 'm2e' && !Mage::getStoreConfig('magento_localized/installed_modules/ess/m2e-pro')): ?>
-
-                <hr />
-
-                <table cellspacing="0" class="form-list">
-                    <tbody>
-
-                    <tr>
-                        <td class="label"><label for="field_m2e_install"><?php echo $this->__('Install M2E module') ?></label></td>
-                        <td class="value">
-                            <select name="m2e_install" id="field_m2e_install">
-                                <option value="0"<?php if (Mage::getStoreConfig('magento_localized/is_initialized')): ?> selected="selected"<?php endif ?>><?php echo $this->__('No') ?></option>
-                                <option value="1"<?php if (!Mage::getStoreConfig('magento_localized/is_initialized')): ?> selected="selected"<?php endif ?>><?php echo $this->__('Yes') ?></option>
-                            </select>
-                        </td>
-                        <td class="comment">
-                            <a href="<?php echo $this->getM2EUrl() ?>" target="_blank" id="m2e_direct_info">
-                                <img src="<?php echo $this->getSkinUrl('images/i_question-mark.png') ?>" alt="" />
-                            </a>
-
-                            <script type="text/javascript">
-                                new Tooltip('m2e_direct_info', '<?php echo $this->__('M2E Pro - eBay / Amazon / Rakuten Magento Integration.') ?>')
-                            </script>
-                        </td>
-                    </tr>
-
-                    </tbody>
-                </table>
-
 
             <?php endif ?>
             </div>

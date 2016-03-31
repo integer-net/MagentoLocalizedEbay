@@ -22,27 +22,6 @@ class IntegerNet_MagentoLocalizedEbay_Adminhtml_MagentoLocalizedEbayController e
         $this->renderLayout();
     }
 
-    public function m2eAction()
-    {
-        if (Mage::getStoreConfig('magento_localized/installed_modules/ess/m2e-pro')) {
-            $this->_forward('installation', 'adminhtml_wizard_installationEbay', 'M2ePro');
-        } else {
-            $this->loadLayout();
-            $this->getLayout()->getBlock('content')->append(
-                $this->getLayout()
-                    ->createBlock('magento_localized_ebay/form', 'magento_localized_ebay.m2e')
-                    ->setTemplate('magento_localized_ebay/m2e.phtml')
-            );
-            $this->renderLayout();
-        }
-    }
-
-    public function installM2eAction()
-    {
-        Mage::getSingleton('magento_localized/installer')->installPackageByName('ess/m2e-pro');
-        $this->_redirectReferer();
-    }
-
     protected function _isAllowed()
     {
         return Mage::getSingleton('admin/session')->isAllowed('system/magento_localized') ||  Mage::getSingleton('admin/session')->isAllowed('magento_localized');
