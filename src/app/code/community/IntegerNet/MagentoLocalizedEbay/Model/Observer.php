@@ -23,8 +23,8 @@ class IntegerNet_MagentoLocalizedEbay_Model_Observer
 
         if (isset($params['paypalplus_active']) && $params['paypalplus_active'] == 1) {
             Mage::getSingleton('magento_localized/installer')->installPackageByName('iways/paypalplus');
-            $this->_setConfigData('iways_paypalplus/api/client_id', $params['paypalplus_api_client_id']);
-            $this->_setConfigData('iways_paypalplus/api/client_secret', $params['paypalplus_api_client_secret']);
+            $this->_setConfigData('iways_paypalplus/api/client_id', Mage::helper('core')->encrypt($params['paypalplus_api_client_id']));
+            $this->_setConfigData('iways_paypalplus/api/client_secret', Mage::helper('core')->encrypt($params['paypalplus_api_client_secret']));
             $this->_setConfigData('iways_paypalplus/api/mode', ( $params['paypalplus_api_mode'] ? 'sandbox' : 'live'));
             $this->_setConfigData('iways_paypalplus/api/hdrimg', $params['paypalplus_api_hdrimg']);
             $this->_setConfigData('payment/iways_paypalplus_payment/active', 1);
