@@ -64,12 +64,32 @@
                     <tbody>
 
                     <?php if ($this->isModuleAvailable('paypalplus')): ?>
+
+                        <tr>
+                            <td class="label description-paypalplus" colspan="2">
+                                <p>
+                                    <?php echo $this->__('You can either use PayPal or <strong>PayPal PLUS</strong>.') ?><br />
+                                    <?php echo $this->__('PayPal PLUS in the all-in-one solution of PayPal which you can use to offer additional payment methods with your PayPal account. PayPal Plus the following key advantages:') ?>
+                                </p>
+                                <ul>
+                                    <li><?php echo $this->__('The four most used payment methods in Germany: PayPal, Debit Payment, Credit Card, Invoice') ?></li>
+                                    <li><?php echo $this->__('More security with invoice payment') ?></li>
+                                    <li><?php echo $this->__('Optional integration of further payment methods like Cash on Delivery and Prepayment') ?></li>
+                                    <li><?php echo $this->__('Management of all payment methods with one account') ?></li>
+                                </ul>
+                                <p>
+                                    <?php echo $this->__('In order to use PayPal PLUS, activate it in <a href="%s" target="_blank">your PayPal business account</a>.', 'https://www.paypal.com/signin/') ?><br />
+                                    <?php echo $this->__('You can find further information regarding the conditions of PayPal PLUS <a href="%s" target="_blank">here</a>.', 'https://www.paypal.com/de/webapps/mpp/paypal-plus-center') ?>
+                                </p>
+                            </td>
+                        </tr>
+
                         <tr>
                             <td class="label"><label for="field_paypalplus_active"><?php echo $this->__('Activate PayPal PLUS?') ?></label></td>
                             <td class="value">
                                 <select name="paypalplus_active" id="field_paypalplus_active">
-                                    <option value="0" <?php if (!Mage::getStoreConfigFlag('payment/iways_paypalplus_payment/active')): ?>selected="selected"<?php endif ?>><?php echo $this->__('No') ?></option>
                                     <option value="1" <?php if (Mage::getStoreConfigFlag('payment/iways_paypalplus_payment/active')): ?>selected="selected"<?php endif ?>><?php echo $this->__('Yes') ?></option>
+                                    <option value="0" <?php if (!Mage::getStoreConfigFlag('payment/iways_paypalplus_payment/active')): ?>selected="selected"<?php endif ?>><?php echo $this->__('No') ?></option>
                                 </select>
                             </td>
                         </tr>
@@ -114,6 +134,13 @@
                                 </select>
                             </td>
                         </tr>
+
+                        <tr class="row-paypalplus">
+                            <td class="label" colspan="2">
+                                <?php echo $this->__('You have the option to make further settings for PayPal PLUS after you finished the setup here.') ?>
+                            </td>
+                        </tr>
+
 
                     <?php endif ?>
 
@@ -188,7 +215,7 @@
                         </td>
                     </tr>
 
-                    <tr>
+                    <tr class="row-paypal">
                         <td class="label" colspan="2">
                             <?php echo $this->__('You have the option to make further settings for PayPal after you finished the setup here.') ?>
                         </td>

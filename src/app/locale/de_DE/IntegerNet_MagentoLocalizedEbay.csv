@@ -8,6 +8,7 @@
 "The information on setting the PayPal API you will find in your PayPal merchant account under the menu item PayPal &gt; My account &gt; My profile &gt; Merchant &gt; <a href=""%s"" target=""_blank"">API access</a>.","Die Informationen zur Einstellung der PayPal API finden Sie in Ihrem PayPal Händlerkonto unter dem Menüpunkt PayPal &gt; Mein Konto &gt; Mein Profil &gt; Verkäufer/ Händler &gt; <a href=""%s"" target=""_blank"">API-Zugriff</a>."
 "You have any further questions about your merchant account? <a href=""%s"" target=""_blank"">Please click here</a>.","Sie haben weitere Fragen zu Ihrem Händlerkonto? <a href=""%s"" target=""_blank"">Klicken Sie hier</a>."
 "You have the option to make further settings for PayPal after you finished the setup here.","Sie haben die Möglichkeit, erweiterte Einstellungen für PayPal vorzunehmen, nachdem Sie die Einstellung hier beendet haben."
+"You have the option to make further settings for PayPal PLUS after you finished the setup here.","Sie haben die Möglichkeit, erweiterte Einstellungen für PayPal PLUS vorzunehmen, nachdem Sie die Einstellung hier beendet haben."
 
 "Configure PayPal Express","PayPal Express konfigurieren"
 
@@ -22,3 +23,12 @@
 "Client ID","Klienten-ID"
 "Client Secret","Klienten-Schlüssel"
 "Header Image URL","URL Ihres Logos für die PayPal PLUS Seite"
+"IntegerNet_MagentoLocalizedEbay::Header Image URL","URL Ihres Logos für die PayPal PLUS Seite"
+"You can either use PayPal or <strong>PayPal PLUS</strong>.","Sie können entweder PayPal oder <strong>PayPal PLUS</strong> einsetzen."
+"PayPal PLUS in the all-in-one solution of PayPal which you can use to offer additional payment methods with your PayPal account. PayPal Plus the following key advantages:","PayPal PLUS ist die All-in-One-Lösung von PayPal, mit der Sie weitere Zahlungsarten über Ihren Paypal-Account anbieten können. PayPal PLUS bietet Ihnen folgende Vorteile:"
+"The four most used payment methods in Germany: PayPal, Debit Payment, Credit Card, Invoice","Die viel beliebtesten Zahlarten in Deutschland: PayPal, Lastschrift, Kreditkarte, Rechnung"
+"More security with invoice payment","Mehr Sicherheit auch bei Kauf auf Rechnung"
+"Optional integration of further payment methods like Cash on Delivery and Prepayment","Optionale Integration weiterer Zahlungsarten wie Nachnahme und Vorkasse"
+"Management of all payment methods with one account","Verwaltung aller Bezahlmethoden über einen Account"
+"In order to use PayPal PLUS, activate it in <a href=""%s"" target=""_blank"">your PayPal business account</a>.","Um PayPal PLUS zu nutzen, schalten Sie es einmalig in <a href=""%s"" target=""_blank"">Ihrem PayPal-Geschäftskonto</a> frei."
+"You can find further information regarding the conditions of PayPal PLUS <a href=""%s"" target=""_blank"">here</a>.","Weitere Informationen zu den Konditionen von PayPal PLUS finden Sie <a href=""%s"" target=""_blank"">hier</a>."
