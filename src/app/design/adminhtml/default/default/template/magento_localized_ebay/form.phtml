@@ -102,7 +102,7 @@
                         </tr>
 
                         <tr class="row-paypalplus">
-                            <td class="label"><label for="field_paypalplus_api_client_secret"><?php echo $this->__('Client Secret') ?></label></td>
+                            <td class="label" rowspan="2"><label for="field_paypalplus_api_client_secret"><?php echo $this->__('Client Secret') ?></label></td>
                             <td class="value">
                                 <input type="password" name="paypalplus_api_client_secret" id="field_paypalplus_api_client_secret" class="input-text" value="<?php echo Mage::getStoreConfig('iways_paypalplus/api/client_secret') ?>" />
                             </td>
@@ -111,10 +111,13 @@
                         <tr class="row-paypalplus">
                             <td class="value">
                                 <div class="ppp-buttons-container">
-                                    <button id="field_paypalplus_credentionals_button" type="button" class="scalable" onclick="window.open('https://www.paypalobjects.com/webstatic/de_DE/downloads/PayPal_Nutzung_der_REST_API.pdf', 'apiwizard','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, ,left=100, top=100, width=380, height=470'); return false;">
+                                    <button id="field_paypalplus_credentionals_button" type="button" class="scalable" onclick="window.open('https://developer.paypal.com/', 'apiwizard','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, ,left=100, top=100, width=380, height=470'); return false;">
                                         <span><span><span><?php echo Mage::helper('paypal')->__('Get Credentials from PayPal') ?></span></span></span>
                                     </button>
                                 </div>
+                                <?php echo $this->__('You can find a text manual <a href="%s" target="_blank">here</a> and a video manual <a href="%s" target="_blank">here</a>.',
+                                    'https://www.paypalobjects.com/webstatic/de_DE/downloads/PayPal_Nutzung_der_REST_API.pdf',
+                                    'https://www.youtube.com/watch?v=XD6ygr0w6sc&list=PL2Srvba6iWq23kOuKbpiFb_NTtlKrYYw3&index=4') ?>
                             </td>
                         </tr>
 
@@ -156,11 +159,14 @@
 
                     <tr class="row-paypal">
                         <td class="value">
-                            <div class="pp-buttons-container">
-                                <button id="payment_express_checkout_required_express_checkout_api_wizard" type="button" class="scalable" onclick="window.open('https://www.paypal.com/us/cgi-bin/webscr?cmd=_login-api-run', 'apiwizard','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, ,left=100, top=100, width=380, height=470'); return false;">
+                            <div class="paypal-buttons-container">
+                                <button id="field_paypalplus_credentionals_button" type="button" class="scalable" onclick="window.open('https://developer.paypal.com/', 'apiwizard','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, ,left=100, top=100, width=380, height=470'); return false;">
                                     <span><span><span><?php echo Mage::helper('paypal')->__('Get Credentials from PayPal') ?></span></span></span>
                                 </button>
                             </div>
+                            <?php echo $this->__('You can find a text manual <a href="%s" target="_blank">here</a> and a video manual <a href="%s" target="_blank">here</a>.',
+                                'https://www.paypalobjects.com/webstatic/de_DE/downloads/PayPal_Nutzung_der_REST_API.pdf',
+                                'https://www.youtube.com/watch?v=XD6ygr0w6sc&list=PL2Srvba6iWq23kOuKbpiFb_NTtlKrYYw3&index=4') ?>
                         </td>
                     </tr>
 
